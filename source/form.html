@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Подбор программы</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a class="page-header__logo" aria-label="Логотип кэт энержи">
+        <img src="index.html" alt="Логотип магазина кэт энержи" class="page-header__logo-icon">
+        <img src="" alt="Cat energy" class="page-header__logo-label">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" aria-label="Открыть меню"></button>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1 class="page-main__h1">Подбор программы</h1>
+      <section class="page-main__choose-program-form choose-program-form">
+        <p class="choose-program-form__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <form action="" class="choose-program-form__form" method="post">
+          <div class="choose-program-form__field">
+            <label for="choose-program-form__name" class="choose-program-form__label">Имя:*</label>
+            <input id="choose-program-form__name" name="name" type="text" class="choose-program-form__text" value="Барсик">
+          </div>
+          <div class="choose-program-form__field">
+            <label for="choose-program-form__weight" class="choose-program-form__label">Вес (кг):*</label>
+            <input id="choose-program-form__weight" name="weight" type="text" class="choose-program-form__text" value="7">
+          </div>
+          <div class="choose-program-form__field">
+            <label for="choose-program-form__age" class="choose-program-form__label">Имя:*</label>
+            <input id="choose-program-form__age" name="age" type="text" class="choose-program-form__text" value="Барсик">
+          </div>
+          <ul class="choose-program-form__aim-list">
+            <li class="choose-program-form__aim">
+              <input type="radio" id="choose-program-form__aim--lose-weight" name="aim" class="choose-program-form__radio" value="lose weight">
+              <label for="choose-program-form__aim--lose-weight" class="choose-program-form__label">Похудение</label>
+            </li>
+            <li class="choose-program-form__aim">
+              <input type="radio" id="choose-program-form__aim--gain-weight" name="aim" class="choose-program-form__radio" value="gain weight">
+              <label for="choose-program-form__aim--gain-weight" class="choose-program-form__label">Набор массы</label>
+            </li>
+            <li class="choose-program-form__aim">
+              <input type="radio" id="choose-program-form__aim--i-dont-know" name="aim" class="choose-program-form__radio" value="i dont know">
+              <label for="choose-program-form__aim--i-dont-know" class="choose-program-form__label">Не знаю (нужен ваш совет)</label>
+            </li>
+          </ul>
+          <fieldset class="choose-program-form__fieldset">
+            <legend class="choose-program-form__legend">Контактные данные (владельца кота)</legend>
+            <div class="choose-program-form__field">
+              <label for="choose-program-form__email" class="choose-program-form__label">e-mail:*</label>
+              <input id="choose-program-form__email" name="name" type="text" class="choose-program-form__text choose-program-form__text--email" placeholder="kuklachev@gmail.com">
+            </div>
+            <div class="choose-program-form__field">
+              <label for="choose-program-form__phone" class="choose-program-form__label">e-mail:*</label>
+              <input id="choose-program-form__phone" name="name" type="text" class="choose-program-form__text choose-program-form__text--phone" placeholder="kuklachev@gmail.com">
+            </div>
+          </fieldset>
+          <fieldset class="choose-program-form__fieldset">
+            <legend class="choose-program-form__legend">Комментарий</legend>
+            <textarea name="comments" id="choose-program-form__comments" class="choose-program-form__comments" cols="30" rows="10"></textarea>
+          </fieldset>
+          <fieldset class="choose-program-form__fieldset">
+            <legend class="choose-program-form__legend">Дополнительно</legend>
+            <ul class="choose-program-form__additional-products">
+              <li class="choose-program-form__additional-product-item">
+                <input type="checkbox" class="choose-program-form__checkbox" id="choose-program-form__checkbox--sweetener" name="additional-products--sweetener">
+                <label for="choose-program-form__checkbox--sweetener" class="choose-program-form__label">Сахарозаменитель</label>
+              </li>
+              <li class="choose-program-form__additional-product-item">
+                <input type="checkbox" class="choose-program-form__checkbox" id="choose-program-form__checkbox--water" name="additional-products--water">
+                <label for="choose-program-form__checkbox--water" class="choose-program-form__label">Питьевая вода</label>
+              </li>
+              <li class="choose-program-form__additional-product-item">
+                <input type="checkbox" class="choose-program-form__checkbox" id="choose-program-form__checkbox--milk" name="additional-products--milk">
+                <label for="choose-program-form__checkbox--milk" class="choose-program-form__label">Молоко</label>
+              </li>
+              <li class="choose-program-form__additional-product-item">
+                <input type="checkbox" class="choose-program-form__checkbox" id="choose-program-form__checkbox--vitamins" name="additional-products--vitamins">
+                <label for="choose-program-form__checkbox--vitamins" class="choose-program-form__label">Витамины</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="button choose-program-form__submit-button">Отправить заявку</button>
+          <p class="choose-program-form__note">* - обязательные поля</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <section class="page-main__contacts contacts contacts--background-gray">
+        <h2 class="visually-hidden"></h2>
+        <p class="contacts__dealer-inventation-title">
+          приглашаем к сотрудничеству дилеров!
+        </p>
+        <p class="contacts__address">
+          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+        </p>
+        <img src="" alt="Офис магазина кэт энержи на карте" class="contacts__map">
+      </section>
+      <a class="page-footer__logo" aria-label="Логотип магазина кэт энержи">
+        <img src="" alt="Логотип кэт энержи" class="page-footer__logo-img">
+      </a>
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a
+              href=""
+              class="social__link social__link--vk"
+              aria-label="Кэт энержи в вконтакте"
+            ></a>
+          </li>
+          <li class="social__item">
+            <a
+              href=""
+              class="social__link social__link--ins"
+              aria-label="Кэт энержи в инстаграм"
+            ></a>
+          </li>
+          <li class="social__item">
+            <a
+              href=""
+              class="social__link social__link--fb"
+              aria-label="Кэт энержи в фейсбук"
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <p class="copyright__link">HTML Academy</p>
+        <a href="" class="copyright__logo"></a>
+      </div>
+    </footer>
+  </body>
+</html>
