@@ -6,26 +6,27 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo-icon logo-icon" aria-label="Логотип кэт энержи.">
-        <!-- Допустимо ли добавить логотип через псевдоэлементы? -->
-        <img src="" alt="Логотип магазина кэт энержи" class="logo-icon__img">
-      </a>
-      <a class="page-header__logo logo" aria-label="Логотип кэт энержи.">
-        <img src="" alt="Cat energy" class="logo__img">
-      </a>
       <nav class="page-header__main-nav main-nav">
+        <a class="main-nav__logo logo" aria-label="Логотип кэт энержи.">
+          <img src="https://via.placeholder.com/150x150" alt="Логотип магазина кэт энержи" class="logo__img">
+        </a>
         <button class="main-nav__toggle" aria-label="Открыть меню"></button>
+        <ul class="main-nav__site-list site-list">
+          <li class="site-list__item site-list__item--active"><a>Главная</a></li>
+          <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
+          <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
+        </ul>
       </nav>
+      <section class="page-header__main-banner main-banner">
+        <h2 class="main-banner__title">Функциональное питание для котов</h2>
+        <p class="main-banner__description">Занялся собой? Займись котом</p>
+        <a href="form.html" class="button main-banner__link">Подобрать программу</a>
+      </section>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Магазин кэт энержи</h1>
-      <section class="page-main__main-banner main-banner">
-        <h2 class="main-banner__title">Функциональное питание для котов</h2>
-        <p class="main-banner__description">Занялся собой? Займись котом</p>
-        <a href="" class="main-banner__link button">Подобрать программу</a>
-      </section>
       <section class="page-main__aims aims">
-        <h2 class="visually-hidden"></h2>
+        <h2 class="visually-hidden">Цели</h2>
         <ul class="aims__aim-list">
           <li class="aims__aim-item">
             <b class="aims__aim-title aims__aim-title--lose-weight">Похудение</b>
@@ -34,7 +35,7 @@
               деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу
               сбросить лишний вес.
             </p>
-            <a href="" class="aims__aim-link">Каталог slim</a>
+            <a href="catalog-slim.html" class="aims__aim-link">Каталог slim</a>
           </li>
           <li class="aims__aim-item">
             <b class="aims__aim-title aims__aim-title--gain-weight">Набор массы</b>
@@ -42,7 +43,7 @@
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat
               Energy Pro поможет вашему коту нарастить необходимые мышцы!
             </p>
-            <a href="" class="aims__aim-link">Каталог pro</a>
+            <a href="catalog-pro.html" class="aims__aim-link">Каталог pro</a>
           </li>
         </ul>
       </section>
@@ -66,7 +67,7 @@
         </ul>
       </section>
       <section class="page-main__cases cases">
-        <h2 class="visually-hidden"></h2>
+        <h2 class="visually-hidden">Примеры</h2>
         <ul class="cases__list">
           <li class="cases__item">
             <b class="cases__title">Живой пример</b>
@@ -76,24 +77,25 @@
               При этом он не менял своих привычек и по-прежнему спит по 16 часов
               в день.
             </p>
-            <ul class="cases__relult-list">
-              <li class="cases__result-item">
-                <p class="cases__result-name">Снижение веса</p>
-                <p class="cases__result-value">5 кг</p>
-              </li>
-              <li class="cases__result-item">
-                <p class="cases__result-name">Затрачено времени</p>
-                <p class="cases__result-value">60 дней</p>
-              </li>
-            </ul>
-            <p class="cases__cost">Затраты на питание: 15 000 руб.</p>
+            <dl class="cases__result-list">
+              <!-- TODO не уверен, что обортка нужна, но пока не знаю, как без нее стилизовать т.к имеем список dt и dd на одном урове вперемешку -->
+              <div class="cases__result-item">
+                <dt class="cases__result-name">Снижение веса</dt>
+                <dd class="cases__result-value">5 кг</dd>
+              </div>
+              <div class="cases__result-item">
+                <dt class="cases__result-name">Затрачено времени</dt>
+                <dd class="cases__result-value">60 дней</dd>
+              </div>
+              <div class="cases__result-item cases__result-item--cost">
+                <dt class="cases__result-name cases__result-name--cost">Затраты на питание:</dt>
+                <dd class="cases__result-value cases__result-value--cost">15 000 руб</dd>
+              </div>
+            </dl>
             <div class="cases__before-after-toggle">
-              <input type="radio" class="visually-hidden" id="cases__before-toggle1" name="cases__before-after-toggle1">
-              <label for="cases__before-toggle1" class="cases__before-after-toggle">Было</label>
-              <!-- возможно можно обойтись только псевдоэлементами label и span не понадобиться -->
+              <button class="cases__before-button">Было</button>
               <span class="cases__before-after-toggle-indicator"></span>
-              <input type="radio" class="visually-hidden" id="cases__after-toggle1" name="cases__before-after-toggle1">
-              <label for="cases__after-toggle1" class="cases__before-after-toggle">Стало</label>
+              <button class="cases__after-button">Стало</button>
             </div>
           </li>
         </ul>
@@ -108,27 +110,25 @@
         <p class="contacts__address">
           ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
         </p>
-        <img src="" alt="Офис магазина кэт энержи на карте" class="contacts__map">
+        <img src="https://via.placeholder.com/150x150" alt="Офис магазина кэт энержи на карте" class="contacts__map">
       </section>
       <a class="page-footer__logo logo" aria-label="Логотип магазина кэт энержи">
-        <img src="" alt="Логотип кэт энержи" class="logo__img">
+        <img src="https://via.placeholder.com/150x150" alt="Логотип кэт энержи" class="logo__img">
       </a>
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a href="" class="social__link social__link--vk" aria-label="Кэт энержи в вконтакте"></a>
-          </li>
-          <li class="social__item">
-            <a href="" class="social__link social__link--ins" aria-label="Кэт энержи в инстаграм"></a>
-          </li>
-          <li class="social__item">
-            <a href="" class="social__link social__link--fb" aria-label="Кэт энержи в фейсбук"></a>
-          </li>
-        </ul>
-      </div>
+      <ul class="page-footer__social social">
+        <li class="social__item">
+          <a href="" class="social__link social__link--vk" aria-label="Кэт энержи в вконтакте"></a>
+        </li>
+        <li class="social__item">
+          <a href="" class="social__link social__link--ins" aria-label="Кэт энержи в инстаграм"></a>
+        </li>
+        <li class="social__item">
+          <a href="" class="social__link social__link--fb" aria-label="Кэт энержи в фейсбук"></a>
+        </li>
+      </ul>
       <div class="page-footer__copyright copyright">
-        <a href="https://htmlacademy.ru/" class="copyright__link">HTML Academy</a>
-        <a href="https://htmlacademy.ru/" class="copyright__logo"></a>
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">HTML Academy</a>
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__logo"></a>
       </div>
     </footer>
   </body>
