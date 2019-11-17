@@ -1,0 +1,49 @@
+.main-banner {
+  position: relative;
+  background-image:
+    url("../img/index-background-mobile@1x.jpg"),
+    linear-gradient(to bottom, $bg-color1 305px, transparent 305px);
+  background-repeat: no-repeat;
+  background-position:
+    center top,
+    0 0;
+  background-size:
+    320px 305px,
+    280px 270px,
+    320px 305px;
+
+
+  /* временно */
+  min-height: 480px;
+}
+
+.main-banner__title {
+  color: $color4;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+.main-banner__description {
+  color: $color4;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.main-banner__button {
+  color: $color4;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: $bg-color1;
+}
+
+.main-banner__img {
+  position: absolute;
+  top: 167px;
+  left: 50%;
+  transform: translateX(-50%);
+}

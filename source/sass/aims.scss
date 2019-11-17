@@ -1,0 +1,37 @@
+.aims__aim-list {
+  @include clear-ul-format;
+}
+
+.aims__aim-item {
+  background-color: $bg-color2;
+  padding: 22px 20px;
+}
+
+.aims__aim-title {
+  color: $color1;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+
+.aims__description {
+  color: $color3;
+  font-family: $second-font-family;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.aims__aim-link {
+  color: $color1;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.aims__aim-item + .aims__aim-item {
+  margin-top: 20px;
+}

@@ -1,0 +1,9 @@
+@mixin clear-padding-margin {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin clear-ul-format {
+  @include clear-padding-margin;
+  list-style: none;
+}

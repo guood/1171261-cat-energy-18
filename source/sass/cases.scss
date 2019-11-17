@@ -1,0 +1,64 @@
+.cases {
+  background-color: $bg-color2;
+  padding: 20px;
+}
+
+.cases__title {
+  color: $color1;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 60px;
+}
+
+.cases__list {
+  @include clear-ul-format;
+}
+
+.cases__description {
+  color: $color3;
+  font-family: $second-font-family;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.cases__result-name {
+  margin: 0;
+  padding: 0;
+  color: $color3;
+  font-family: $second-font-family;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+}
+
+.cases__result-value {
+  margin: 0;
+  padding: 0;
+  color: $color1;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.cases__result-item--cost {
+  text-align: left;
+}
+
+.cases__result-name--cost,
+.cases__result-value--cost {
+  display: inline;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: $main-font-family;
+}
+
+.cases__before-after-button {
+  color: $color1;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+}

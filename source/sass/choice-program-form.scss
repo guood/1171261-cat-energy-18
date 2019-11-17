@@ -1,0 +1,60 @@
+.choice-program-form {
+  padding: 0 20px;
+}
+
+.choice-program-form__field-group {
+  @include clear-ul-format;
+}
+
+.choice-program-form__description {
+  color: $color1;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.choice-program-form__label {
+  color: $color2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.choice-program-form__text {
+  color: $color3;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.choice-program-form__fieldset {
+  border: none;
+}
+
+.choice-program-form__legend {
+  color: $color1;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.choice-program-form__note {
+  color: $color3;
+  font-family: $second-font-family;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.choice-program-form__submit-button {
+  background-color: $bg-color1;
+
+  color: $color4;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+}

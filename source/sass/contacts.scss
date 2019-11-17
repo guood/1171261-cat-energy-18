@@ -1,0 +1,24 @@
+.contacts--background-white {
+  background-color: $color4;
+}
+
+.contacts__dealer-invitation {
+  color: $color1;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.contacts__address {
+  color: $color3;
+  font-family: $second-font-family;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.contacts__map {
+  display: block;
+  position: relative;
+}
