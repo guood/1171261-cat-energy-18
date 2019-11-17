@@ -8,7 +8,7 @@
 .site-list__item {
   padding: 0;
   margin: 0;
-  color: $color1;
+  color: $verydarkgray;
   font-size: 20px;
   font-weight: 500;
   line-height: 20px;
@@ -16,7 +16,8 @@
 }
 
 .site-list__item-link {
-  color: $color1;
+  text-decoration: none;
+  color: $verydarkgray;
   display: block;
   padding-top: 24px;
   padding-bottom: 24px;

@@ -11,7 +11,7 @@
 }
 
 .catalog__product-name {
-  color: $color1;
+  color: $verydarkgray;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -25,24 +25,24 @@
 .catalog__characteristic-name,
 .catalog__characteristic-value {
   @include clear-padding-margin;
-  color: $color3;
-  font-family: $second-font-family;
+  color: $gray;
+  font-family: $font-family-secondary;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
 }
 
 .catalog__order-button {
-  color: $color4;
+  color: $white;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
-  background-color: $bg-color1;
+  background-color: $green;
 }
 
 .catalog__show-more-title {
-  color: $color1;
+  color: $verydarkgray;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -50,15 +50,15 @@
 }
 
 .catalog__show-more-description {
-  color: $color3;
-  font-family: $second-font-family;
+  color: $gray;
+  font-family: $font-family-secondary;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
 }
 
 .catalog__show-all-button {
-  color: $color3;
+  color: $gray;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;

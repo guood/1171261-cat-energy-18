@@ -3,12 +3,16 @@
 }
 
 .aims__aim-item {
-  background-color: $bg-color2;
+  background-color: $lightgray;
   padding: 22px 20px;
+
+  & + & {
+    margin-top: 20px;
+  }
 }
 
 .aims__aim-title {
-  color: $color1;
+  color: $verydarkgray;
   font-size: 24px;
   font-weight: 400;
   line-height: 37px;
@@ -16,22 +20,18 @@
 }
 
 .aims__description {
-  color: $color3;
-  font-family: $second-font-family;
+  color: $gray;
+  font-family: $font-family-secondary;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
 }
 
 .aims__aim-link {
-  color: $color1;
+  color: $verydarkgray;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
   text-transform: uppercase;
   text-decoration: none;
-}
-
-.aims__aim-item + .aims__aim-item {
-  margin-top: 20px;
 }

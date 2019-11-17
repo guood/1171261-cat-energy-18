@@ -1,39 +1,10 @@
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 400;
-  src:
-    url("../fonts/oswaldregular.woff2") format("woff2"),
-    url("../fonts/oswaldregular.woff") format("woff");
-}
+$font-family-base: "Oswald", "Arial", sans-serif;
+$font-family-secondary: "Arial", sans-serif;
 
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 500;
-  src:
-    url("../fonts/oswaldmedium.woff2") format("woff2"),
-    url("../fonts/oswaldmedium.woff") format("woff");
-}
+$verydarkgray: #111111;
+$darkgray: #222222;
+$gray: #444444;
+$white: #ffffff;
+$lightgray: #f2f2f2;
+$green: #68b738;
 
-@font-face {
-  font-family: "Arial MT";
-  font-style: normal;
-
-  src: url("../fonts/arialmt.woff") format("woff");
-}
-
-$main-font-family: "Oswald", sans-serif;
-/* Нормальное название этой переменной придумать не смог.
-Шрифт применяется в разных местах и выделить семантику не получается */
-$second-font-family: "Arial MT", arial;
-
-/* цвета текста */
-$color1: #111111;
-$color2: #222222;
-$color3: #444444;
-$color4: #ffffff;
-
-/* фоновые цвета */
-$bg-color1: #68b738;
-$bg-color2: #f2f2f2;

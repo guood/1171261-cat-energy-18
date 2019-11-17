@@ -1,74 +1,22 @@
-/* TODO
-- много дублирующего кода в стилях текста. Нужно их сгрупировать и обозвать без привязки к стилям. Как?
- */
-
-@import "normilize";
+@import "normalize";
+@import "fonts";
 @import "variables.scss";
 @import "mixins";
-@import "page-header";
-@import "main-banner";
-@import "page-main";
-@import "site-list";
-@import "aims";
-@import "how-it-works";
-@import "cases";
-@import "contacts";
-@import "page-footer";
-@import "social";
-@import "copyright";
-@import "catalog";
-@import "additional-products";
-@import "action";
-@import "choice-program-form";
-
-body {
-  @include clear-padding-margin;
-  font-family: $main-font-family;
-  font-weight: 400;
-  font-size: 14px;
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-.content-box {
-  box-sizing: content-box;
-}
-
-.visually-hidden {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-/* TODO пока контенер задан так для наглядности */
-.container {
-  width: 320px;
-  margin: 0 auto;
-}
-
-.link {
-  text-decoration: none;
-}
-
-.button {
-  text-decoration: none;
-  border: none;
-}
+@import "global";
+@import "helpers";
+@import "blocks/button";
+@import "blocks/page-header";
+@import "blocks/main-banner";
+@import "blocks/page-main";
+@import "blocks/site-list";
+@import "blocks/aims";
+@import "blocks/how-it-works";
+@import "blocks/cases";
+@import "blocks/contacts";
+@import "blocks/page-footer";
+@import "blocks/social";
+@import "blocks/copyright";
+@import "blocks/catalog";
+@import "blocks/additional-products";
+@import "blocks/action";
+@import "blocks/choice-program-form";

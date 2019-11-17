@@ -3,11 +3,11 @@
 }
 
 .contacts--background-white {
-  background-color: $color4;
+  background-color: $white;
 }
 
 .contacts__dealer-invitation {
-  color: $color1;
+  color: $verydarkgray;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -15,8 +15,8 @@
 }
 
 .contacts__address {
-  color: $color3;
-  font-family: $second-font-family;
+  color: $gray;
+  font-family: $font-family-secondary;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
