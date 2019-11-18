@@ -30,6 +30,14 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 12px;
+
+  &.cases__result-name--cost {
+    display: inline;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    font-family: $font-family-base;
+  }
 }
 
 .cases__result-value {
@@ -40,20 +48,20 @@
   font-weight: 400;
   line-height: 24px;
   text-transform: uppercase;
+
+  &.cases__result-value--cost {
+    display: inline;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    font-family: $font-family-base;
+  }
 }
 
 .cases__result-item--cost {
   text-align: left;
 }
 
-.cases__result-name--cost,
-.cases__result-value--cost {
-  display: inline;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  font-family: $font-family-base;
-}
 
 .cases__before-after-button {
   color: $verydarkgray;

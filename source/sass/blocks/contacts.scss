@@ -1,9 +1,9 @@
 .contacts {
   padding: 0 20px;
-}
 
-.contacts--background-white {
-  background-color: $white;
+  &.contacts--background-white {
+    background-color: $white;
+  }
 }
 
 .contacts__dealer-invitation {

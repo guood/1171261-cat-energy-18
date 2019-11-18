@@ -1,8 +1,18 @@
 .button {
   text-decoration: none;
   border: none;
-}
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
 
-.button--green {
-  background-color: $green;
+  &.button--green {
+    color: $white;
+    background-color: $green;
+  }
+
+  &.button--gray {
+    color: $gray;
+    background-color: $lightgray;
+  }
 }
