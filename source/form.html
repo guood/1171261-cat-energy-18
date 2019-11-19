@@ -3,28 +3,29 @@
   <head>
     <meta charset="UTF-8">
     <title>Подбор программы</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header container">
       <nav class="page-header__main-nav main-nav">
         <a href="index.html" class="main-nav__logo logo" aria-label="Логотип кэт энержи.">
-          <img src="https://via.placeholder.com/150x150" alt="Логотип магазина кэт энержи" class="logo__img">
+          <img src="img/logo-mobile.svg" alt="Логотип магазина кэт энержи" class="logo__img" width="191" height="38">
         </a>
         <button class="main-nav__toggle" aria-label="Открыть меню"></button>
         <ul class="main-nav__site-list site-list">
-          <li class="site-list__item"><a href="index.html">Главная</a></li>
-          <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
-          <li class="site-list__item site-list__item--active"><a>Подбор программы</a></li>
+          <li class="site-list__item"><a href="index.html" class="site-list__item-link">Главная</a></li>
+          <li class="site-list__item"><a href="catalog.html" class="site-list__item-link">Каталог продукции</a></li>
+          <li class="site-list__item site-list__item--active"><a class="site-list__item-link">Подбор программы</a></li>
         </ul>
       </nav>
     </header>
-    <main class="page-main">
+    <main class="page-main container">
       <h1 class="page-main__title">Подбор программы</h1>
       <section class="page-main__choice-program-form choice-program-form">
         <h2 class="visually-hidden">Форма подбора программы</h2>
         <p class="choice-program-form__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
         <form action="https://echo.htmlacademy.ru" class="choice-program-form__form" method="post">
-          <ul class="choice-program-form__cat-data">
+          <ul class="choice-program-form__field-group">
             <li class="choice-program-form__field">
               <label for="name" class="choice-program-form__label">Имя:*</label>
               <input id="name" name="name" type="text" class="choice-program-form__text" placeholder="Барсик" required>
@@ -38,7 +39,7 @@
               <input id="age" name="age" type="text" class="choice-program-form__text" placeholder="7">
             </li>
           </ul>
-          <ul class="choice-program-form__aim-list">
+          <ul class="choice-program-form__field-group">
             <li class="choice-program-form__field">
               <input type="radio" id="aimLoseWeight" name="aim" class="choice-program-form__radio" value="lose weight" checked>
               <label for="aimLoseWeight" class="choice-program-form__label">Похудение</label>
@@ -54,7 +55,7 @@
           </ul>
           <fieldset class="choice-program-form__fieldset">
             <legend class="choice-program-form__legend">Контактные данные (владельца кота)</legend>
-            <ul class="choice-program-form__contacts">
+            <ul class="choice-program-form__field-group">
               <li class="choice-program-form__field">
                 <label for="email" class="choice-program-form__label">E-mail:*</label>
                 <input id="email" name="e-mail" type="email" class="choice-program-form__text choice-program-form__text--email" placeholder="kuklachev@gmail.com" required>
@@ -65,13 +66,13 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="choice-program-form__fieldset">
-            <legend class="choice-program-form__legend">Комментарий</legend>
-            <textarea name="comments" id="choice-program-form__comments" class="choice-program-form__comments" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
-          </fieldset>
+          <div class="choice-program-form__fieldset">
+            <label for="comments" class="choice-program-form__legend">Комментарий</label>
+            <textarea name="comments" id="comments" class="choice-program-form__comments" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
           <fieldset class="choice-program-form__fieldset">
             <legend class="choice-program-form__legend">Дополнительно</legend>
-            <ul class="choice-program-form__additional-product-list">
+            <ul class="choice-program-form__field-group">
               <li class="choice-program-form__field">
                 <input type="checkbox" class="choice-program-form__checkbox" id="additionalProductsSweetener" name="additional-products--sweetener" checked>
                 <label for="additionalProductsSweetener" class="choice-program-form__label">Сахарозаменитель</label>
@@ -90,24 +91,24 @@
               </li>
             </ul>
           </fieldset>
-          <button type="submit" class="button choice-program-form__submit-button">Отправить заявку</button>
+          <button type="submit" class="button button--green choice-program-form__submit-button">Отправить заявку</button>
           <p class="choice-program-form__note">* - обязательные поля</p>
         </form>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer container">
       <section class="page-footer__contacts contacts contacts--background-gray">
-        <h2 class="visually-hidden">Контакты</h2>
+        <h2 class="visually-hidden">Контакты магазина кэт энержи</h2>
         <p class="contacts__dealer-invitation">
-          приглашаем к сотрудничеству дилеров!
+          Приглашаем к сотрудничеству дилеров!
         </p>
         <p class="contacts__address">
           ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
         </p>
-        <img src="https://via.placeholder.com/150x150" alt="Офис магазина кэт энержи на карте" class="contacts__map">
+        <img src="img/bg-map-mobile@1x.png" alt="Офис магазина кэт энержи на карте" class="contacts__map">
       </section>
-      <a href="index.html" class="page-footer__logo logo" aria-label="Логотип магазина кэт энержи.">
-        <img src="https://via.placeholder.com/150x150" alt="Логотип кэт энержи" class="logo__img">
+      <a href="index.html" class="page-footer__logo logo" aria-label="Логотип магазина кэт энержи">
+        <img src="img/logo-footer.svg" width="128" height="24" alt="Логотип кэт энержи" class="logo__img">
       </a>
       <ul class="page-footer__social social">
         <li class="social__item">
@@ -122,7 +123,9 @@
       </ul>
       <div class="page-footer__copyright copyright">
         <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">HTML Academy</a>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__logo"></a>
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__logo-link">
+          <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип htmlacademy" class="copyright__logo-img">
+        </a>
       </div>
     </footer>
   </body>

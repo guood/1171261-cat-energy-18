@@ -1,0 +1,32 @@
+.additional-products__title {
+  color: $verydarkgray;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.additional-products__list {
+  @include clear-ul-format;
+}
+
+.additional-products__name {
+  color: $darkgray;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.additional-products__amount,
+.additional-products__price {
+  @include clear-padding-margin;
+  color: $gray;
+  font-family: $font-family-secondary;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.additional-products__name-link {
+  text-decoration: none;
+}

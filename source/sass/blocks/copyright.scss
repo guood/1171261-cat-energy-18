@@ -1,0 +1,16 @@
+.copyright {
+  padding: 20px;
+}
+
+.copyright__link {
+  text-decoration: none;
+  color: $gray;
+  font-family: $font-family-secondary;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.copyright__logo-img {
+  display: block;
+}

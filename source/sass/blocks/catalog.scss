@@ -1,0 +1,49 @@
+.catalog {
+  padding: 0 20px;
+}
+
+.catalog__product-list {
+  @include clear-ul-format;
+}
+
+.catalog__product-img {
+  display: block;
+}
+
+.catalog__product-name {
+  color: $verydarkgray;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.catalog__product-name-link {
+  text-decoration: none;
+}
+
+.catalog__characteristic-name,
+.catalog__characteristic-value {
+  @include clear-padding-margin;
+  color: $gray;
+  font-family: $font-family-secondary;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.catalog__show-more-title {
+  color: $verydarkgray;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.catalog__show-more-description {
+  color: $gray;
+  font-family: $font-family-secondary;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}

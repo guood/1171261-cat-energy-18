@@ -1,0 +1,24 @@
+.site-list {
+  @include clear-ul-format;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-list__item {
+  padding: 0;
+  margin: 0;
+  color: $verydarkgray;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.site-list__item-link {
+  text-decoration: none;
+  color: $verydarkgray;
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
