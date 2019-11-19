@@ -6,12 +6,12 @@
   line-height: 20px;
   text-transform: uppercase;
 
-  &.button--green {
+  &--green {
     color: $white;
     background-color: $green;
   }
 
-  &.button--gray {
+  &--gray {
     color: $gray;
     background-color: $lightgray;
   }

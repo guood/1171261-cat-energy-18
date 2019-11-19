@@ -31,7 +31,7 @@
   font-weight: 400;
   line-height: 12px;
 
-  &.cases__result-name--cost {
+  &--cost {
     display: inline;
     font-size: 14px;
     font-weight: 400;
@@ -49,7 +49,7 @@
   line-height: 24px;
   text-transform: uppercase;
 
-  &.cases__result-value--cost {
+  &--cost {
     display: inline;
     font-size: 14px;
     font-weight: 400;
@@ -63,7 +63,7 @@
 }
 
 
-.cases__before-after-button {
+.cases__toggle-button {
   color: $verydarkgray;
   font-size: 16px;
   font-weight: 400;
