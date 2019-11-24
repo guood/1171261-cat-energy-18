@@ -1,0 +1,17 @@
+@import "../variables";
+
+body {
+  background: url("../img/dev/cat-energy-index-mobile.psd.png") no-repeat 50% 0;
+}
+
+@media (min-width: $tablet-width) {
+  body {
+    background: url("../img/dev/cat-energy-index-tablet.psd.png") no-repeat 50% 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  body {
+    background: url("../img/dev/cat-energy-index-desktop.psd.png") no-repeat 50% 0;
+  }
+}

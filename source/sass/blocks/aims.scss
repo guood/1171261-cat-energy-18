@@ -6,6 +6,9 @@
   background-color: $lightgray;
   padding: 22px 20px;
 
+  /* временно */
+  background-color: transparent;
+
   & + & {
     margin-top: 20px;
   }
