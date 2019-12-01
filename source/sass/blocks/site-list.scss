@@ -2,7 +2,7 @@
   @include clear-ul-format;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  flex-grow: 1;
 }
 
 .site-list__item {
@@ -13,12 +13,37 @@
   font-weight: 500;
   line-height: 20px;
   text-transform: uppercase;
+  border-top: 1px solid #e6e6e6;
 }
 
 .site-list__item-link {
   text-decoration: none;
   color: $verydarkgray;
   display: block;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 23px;
+  padding-bottom: 22px;
+  text-align: center;
 }
+
+@media (min-width: $tablet-width) {
+  .site-list {
+    flex-direction: row;
+    flex-grow: 0;
+  }
+
+  .site-list__item-link {
+    padding: 0;
+  }
+
+  .site-list__item {
+    border: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-list__item-link {
+    color: $white;
+  }
+
+}
+

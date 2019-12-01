@@ -19,7 +19,7 @@
 
 .additional-products__amount,
 .additional-products__price {
-  @include clear-padding-margin;
+  padding: 0;
   color: $gray;
   font-family: $font-family-secondary;
   font-size: 14px;

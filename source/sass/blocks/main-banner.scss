@@ -1,47 +1,129 @@
 .main-banner {
-  position: relative;
+  padding: 0 $mobile-margins 0;
+  display: flex;
+  flex-direction: column;
+
   background-image:
     url("../img/index-background-mobile@1x.jpg"),
     linear-gradient(to bottom, $green 305px, transparent 305px);
   background-repeat: no-repeat;
-  background-position:
-    center top,
-    0 0;
-  background-size:
-    320px 305px,
-    280px 270px,
-    320px 305px;
-
-
-  /* временно */
-  min-height: 480px;
-  background: transparent;
+  background-position: center top;
+  background-size: 320px 305px;
 }
 
 .main-banner__title {
+  @include clear-margin-padding;
+  margin-top: 29px;
+
   color: $white;
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
+  text-align: center;
+  max-width: 100%;
 }
 
 .main-banner__description {
+  @include clear-margin-padding;
+  margin-top: 24px;
+
   color: $white;
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
   text-transform: uppercase;
-}
-
-.main-banner__button {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
+  text-align: center;
+  max-width: 100%;
 }
 
 .main-banner__img {
-  position: absolute;
-  top: 167px;
-  left: 50%;
-  transform: translateX(-50%);
+  display: block;
+  margin-top: 28px;
+  text-align: center;
+}
+
+.main-banner__button {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-top: 3px;
+  height: 40px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-banner {
+    position: relative;
+    align-items: flex-start;
+    min-height: 868px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  .main-banner__title {
+    margin-top: 62px;
+
+    font-size: 60px;
+    line-height: 60px;
+    max-width: 100%;
+
+    text-align: left;
+    color: $verydarkgray;
+  }
+
+  .main-banner__description {
+    margin-top: 35px;
+
+    font-size: 20px;
+    line-height: 20px;
+    max-width: 100%;
+
+    text-align: left;
+    color: $verydarkgray;
+  }
+
+  /* TODO пока так. Как менять картинки в зависимости от устройства пока не знаю */
+  .main-banner__img {
+    position: absolute;
+    left: 50%;
+    top: 230px;
+    width: auto;
+    height: 609px;
+    transform: translateX(-45%);
+    z-index: -1;
+  }
+
+  .main-banner__button {
+    margin-top: 48px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-banner {
+    padding-left: 190px;
+    padding-right: 50%;
+
+    min-height: 583px;
+  }
+
+  .main-banner__title {
+    margin-top: 110px;
+  }
+
+  .main-banner__description {
+    margin-top: 35px;
+  }
+
+  .main-banner__button {
+    margin-top: 55px;
+  }
+
+  .main-banner__img {
+    z-index: 1;
+    top: 5px;
+    left: 50%;
+    width: auto;
+    height: 499px;
+    transform: translateX(-130px);
+  }
 }

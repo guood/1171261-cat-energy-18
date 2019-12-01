@@ -1,9 +1,9 @@
-@mixin clear-padding-margin {
+@mixin clear-margin-padding {
   margin: 0;
   padding: 0;
 }
 
 @mixin clear-ul-format {
-  @include clear-padding-margin;
+  padding: 0;
   list-style: none;
 }

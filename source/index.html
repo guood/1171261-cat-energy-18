@@ -5,15 +5,13 @@
     <title>Кет энержи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/index-dev.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index-dev.css">
   </head>
   <body>
     <header class="page-header container">
       <nav class="page-header__main-nav main-nav">
-        <a class="main-nav__logo logo" aria-label="Логотип кэт энержи.">
-          <img src="img/logo-mobile.svg" alt="Логотип магазина кэт энержи" class="logo__img" width="191" height="38">
-        </a>
+        <a class="main-nav__logo logo" aria-label="Логотип кэт энержи."></a>
         <button class="main-nav__toggle" aria-label="Открыть меню"></button>
         <ul class="main-nav__site-list site-list">
           <li class="site-list__item site-list__item--active"><a class="site-list__item-link">Главная</a></li>
@@ -24,8 +22,8 @@
       <section class="page-header__main-banner main-banner">
         <h2 class="main-banner__title">Функциональное питание для котов</h2>
         <p class="main-banner__description">Занялся собой? Займись котом</p>
-        <a href="form.html" class="button button--green main-banner__button">Подобрать программу</a>
         <img src="img/index-can-mobile@1x.png" width="280" height="270" alt="Кэт энержи курица 500 грамм" class="main-banner__img">
+        <a href="form.html" class="button button--green main-banner__button">Подобрать программу</a>
       </section>
     </header>
     <main class="page-main container">
@@ -33,8 +31,8 @@
       <section class="page-main__aims aims">
         <h2 class="visually-hidden">Цели</h2>
         <ul class="aims__aim-list">
-          <li class="aims__aim-item">
-            <b class="aims__aim-title aims__aim-title--lose-weight">Похудение</b>
+          <li class="aims__aim-item aims__aim-item--lose-weight">
+            <b class="aims__aim-title">Похудение</b>
             <p class="aims__description">
               Ваш кот весит больше собаки и почти утратил способность лазить по
               деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу
@@ -42,8 +40,8 @@
             </p>
             <a href="catalog-slim.html" class="aims__aim-link">Каталог slim</a>
           </li>
-          <li class="aims__aim-item">
-            <b class="aims__aim-title aims__aim-title--gain-weight">Набор массы</b>
+          <li class="aims__aim-item aims__aim--gain-weight">
+            <b class="aims__aim-title">Набор массы</b>
             <p class="aims__description">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat
               Energy Pro поможет вашему коту нарастить необходимые мышцы!
@@ -96,9 +94,8 @@
                 <dd class="cases__result-value cases__result-value--cost">15 000 руб</dd>
               </div>
             </dl>
-            <!-- Не уверен, но думаю в реальном проекте картинки в кейсе будут задаваться не через css -->
-            <img src="img/before-mobile@1x.png" width="311" height="232" alt="Фотография кота до программы" class="cases__before-img">
-            <img src="img/after-mobile@1x.png" width="251" height="240" alt="Фотография кота после программы" class="cases__after-img">
+            <img src="img/before-mobile@1x.png" alt="Фотография кота до программы" class="cases__img cases__img--before">
+            <img src="img/after-mobile@1x.png" width="251" height="240" alt="Фотография кота после программы" class="cases__img cases__img--after">
             <div class="cases__toggle">
               <button class="cases__toggle-button">Было</button>
               <span class="cases__toggle-indicator"></span>

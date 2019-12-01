@@ -24,7 +24,7 @@
 
 .catalog__characteristic-name,
 .catalog__characteristic-value {
-  @include clear-padding-margin;
+  padding: 0;
   color: $gray;
   font-family: $font-family-secondary;
   font-size: 12px;

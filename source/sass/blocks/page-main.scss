@@ -7,17 +7,37 @@
 }
 
 .page-main__aims {
-  margin: 0 20px;
+  padding: 2px $mobile-margins 0;
 }
 
 .page-main__how-it-works {
-  margin: 0 20px 42px;
+  margin: 20px $mobile-margins 42px;
 }
 
 .page-main__additional-products {
-  margin: 20px;
+  margin: 20px $mobile-margins 20px;
 }
 
 .page-main__action {
-  margin: 39px 20px 35px;
+  margin: 39px $mobile-margins 35px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-main__aims {
+    padding: 2px $tablet-margins 0;
+  }
+
+  .page-main__how-it-works {
+    margin: 45px $tablet-margins 42px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main__aims {
+    padding: 0 $desktop-margins;
+  }
+
+  .page-main__how-it-works {
+    margin: 70px $desktop-margins 0;
+  }
 }

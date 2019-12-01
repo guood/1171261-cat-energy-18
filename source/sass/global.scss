@@ -9,8 +9,15 @@ html {
 }
 
 body {
-  @include clear-padding-margin;
+  padding: 0;
+  margin: 0;
   font-family: $font-family-base;
   font-weight: 400;
   font-size: 14px;
+  min-width: 320px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
