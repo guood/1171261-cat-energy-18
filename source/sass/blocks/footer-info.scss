@@ -1,0 +1,33 @@
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-info__logo {
+  padding-top: 42px;
+  padding-bottom: 32px;
+}
+
+.footer-info__img {
+  width: 128px;
+  height: 24px;
+}
+
+.footer-info__social {
+  min-height: 62px;
+}
+
+.footer-info__copyright {
+  align-self: stretch;
+  padding: 25px 0;
+}
+
+@media (min-width: $tablet-width) {
+  .footer-info {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+}

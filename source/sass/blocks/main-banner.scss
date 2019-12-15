@@ -1,5 +1,5 @@
 .main-banner {
-  padding: 0 $mobile-margins 0;
+  padding: 28px $mobile-margins 0;
   display: flex;
   flex-direction: column;
 
@@ -9,11 +9,12 @@
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 320px 305px;
+
+  min-height: 480px;
 }
 
 .main-banner__title {
   @include clear-margin-padding;
-  margin-top: 29px;
 
   color: $white;
   font-size: 36px;
@@ -25,7 +26,7 @@
 
 .main-banner__description {
   @include clear-margin-padding;
-  margin-top: 24px;
+  margin-top: 27px;
 
   color: $white;
   font-size: 14px;
@@ -58,10 +59,11 @@
     min-height: 868px;
     padding-left: 120px;
     padding-right: 120px;
+    background-image: none;
   }
 
   .main-banner__title {
-    margin-top: 62px;
+    margin-top: 30px;
 
     font-size: 60px;
     line-height: 60px;
@@ -72,7 +74,7 @@
   }
 
   .main-banner__description {
-    margin-top: 35px;
+    margin-top: 42px;
 
     font-size: 20px;
     line-height: 20px;
@@ -107,11 +109,11 @@
   }
 
   .main-banner__title {
-    margin-top: 110px;
+    margin-top: 80px;
   }
 
   .main-banner__description {
-    margin-top: 35px;
+    margin-top: 40px;
   }
 
   .main-banner__button {

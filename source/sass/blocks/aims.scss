@@ -9,6 +9,11 @@
   background-color: $lightgray;
   padding: 22px 20px;
   margin-top: 20px;
+
+  min-height: 266px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .aims__aim-title {
@@ -45,7 +50,7 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  margin-top: 23px;
+  margin-top: auto;
   padding-top: 19px;
 
   border-top: 1px solid $lightgray;
@@ -76,7 +81,6 @@
   }
 
   .aims__aim-link {
-    margin-top: 55px;
     padding: 0;
     border: none;
 

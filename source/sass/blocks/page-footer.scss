@@ -2,12 +2,24 @@
   background-color: $lightgray;
   display: flex;
   flex-direction: column;
-  align-items: center;
 
   /* временно */
   background: transparent;
 }
 
-.page-footer__contacts {
-  margin-bottom: 39px;
+.page-footer__info {
+  padding-left: $mobile-margins;
+  padding-right: $mobile-margins;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__info {
+    padding: 20px $tablet-margins;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer__info {
+    padding: 20px $desktop-margins;
+  }
 }

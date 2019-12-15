@@ -1,30 +1,99 @@
 .contacts {
-  padding: 0 20px;
-
   &--background-white {
     background-color: $white;
-
-    /* временно */
-    background: transparent;
   }
 }
 
+.contacts__info {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 20px 26px;
+}
+
 .contacts__dealer-invitation {
+  @include clear-margin-padding;
   color: $verydarkgray;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+  width: 130px;
 }
 
 .contacts__address {
+  @include clear-margin-padding;
+  display: flex;
+  flex-direction: column;
+
   color: $gray;
   font-family: $font-family-secondary;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
+  width: 140px;
+}
+
+.contacts__street,
+.contacts__city {
+  @include clear-margin-padding;
 }
 
 .contacts__map {
   display: block;
+  height: 360px;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__info {
+    padding: 69px 72px 62px;
+  }
+
+  .contacts__dealer-invitation {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .contacts__address {
+    text-align: right;
+    font-size: 16px;
+    width: 160px;
+  }
+
+  .contacts__city {
+    margin-top: 20px;
+  }
+
+  .contacts__map {
+    height: 395px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    position: relative;
+  }
+
+  .contacts__info {
+    position: absolute;
+
+    background-color: $white;
+
+    left: 110px;
+    top: 95px;
+
+    width: 570px;
+    min-height: 200px;
+
+    padding: 67px 85px 62px 76px;
+  }
+
+  .contacts__address {
+    text-align: left;
+    margin-left: 95px;
+    margin-top: -5px;
+  }
+
+  .contacts__map {
+    height: 400px;
+  }
 }

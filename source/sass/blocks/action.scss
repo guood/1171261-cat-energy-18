@@ -18,3 +18,17 @@
 .action__link {
   text-decoration: none;
 }
+
+@media (min-width: $tablet-width) {
+  .action {
+    min-height: 200px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .action {
+    width: 245px;
+    min-height: 289px;
+  }
+
+}

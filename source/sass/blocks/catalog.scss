@@ -1,13 +1,26 @@
 .catalog {
-  padding: 0 20px;
+  padding: 0;
 }
 
 .catalog__product-list {
   @include clear-ul-format;
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog__product {
+  padding: 0 20px 24px;
+  min-height: 209px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid $lightgray3;
+  border-top: none;
 }
 
 .catalog__product-img {
   display: block;
+  width: 140px;
+  height: 144px;
 }
 
 .catalog__product-name {
@@ -16,20 +29,43 @@
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+  width: 100px;
 }
 
 .catalog__product-name-link {
   text-decoration: none;
+  display: block;
+}
+
+.catalog__characteristic-list {
+  @include clear-margin-padding;
+  width: 138px;
 }
 
 .catalog__characteristic-name,
 .catalog__characteristic-value {
-  padding: 0;
+  @include clear-margin-padding;
+
   color: $gray;
   font-family: $font-family-secondary;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
+}
+
+.catalog__order-button {
+  min-height: 40px;
+  width: 280px;
+}
+
+.catalog__show-more {
+  padding: 0 20px 24px;
+  min-height: 209px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid $lightgray3;
+  border-top: none;
 }
 
 .catalog__show-more-title {
@@ -46,4 +82,63 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog__product-list {
+    margin: 0 $tablet-margins;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .catalog__product {
+    position: relative;
+
+    flex-direction: column;
+    align-items: center;
+    min-height: 571px;
+    width: 324px;
+
+    background-image: linear-gradient(to top, $lightgray 431px, transparent 431px);
+  }
+
+  .catalog__product-info {
+    margin-top: auto;
+  }
+
+  .catalog__product-img-link {
+    position: absolute;
+    left: 50%;
+    bottom: 305px;
+    transform: translateX(-50%);
+  }
+
+  .catalog__show-more {
+    min-height: 431px;
+    width: 324px;
+    margin-top: 140px;
+
+    border: 1px solid $lightgray;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog__product-list {
+    margin: 0;
+  }
+
+  .catalog__product {
+    width: 245px;
+    min-height: 571px;
+  }
+
+  .catalog__order-button {
+    width: 169px;
+  }
+
+  .catalog__show-more {
+    width: 245px;
+    min-height: 431px;
+  }
 }
