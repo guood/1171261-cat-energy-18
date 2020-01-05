@@ -3,8 +3,8 @@
 }
 
 .choice-program-form__form {
-  display: flex;
-  flex-direction: column;
+  //display: flex;
+  //flex-direction: column;
 
   padding-top: 5px;
 }
@@ -86,14 +86,14 @@
   margin-top: 25px;
   padding-top: 5px;
 
-  min-width: 630px;
+  width: 630px;
 
   border: none;
 }
 
 .choice-program-form__field {
-  display: flex;
-  align-items: center;
+  //display: flex;
+  //align-items: center;
 
   &--text {
     margin-top: 14px;
@@ -120,7 +120,7 @@
 .choice-program-form__comments {
   @include clear-margin-padding;
   margin-top: 33px;
-  width: 100%;
+  //width: 100%;
   height: 150px;
 
   color: $gray;

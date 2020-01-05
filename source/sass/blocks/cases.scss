@@ -1,16 +1,19 @@
 .cases {
+  padding-top: 5px;
+  padding-bottom: 22px;
   background-color: $lightgray;
-  padding: 20px $mobile-margins 30px;
+  //padding: 15px $mobile-margins 30px;
 }
 
 .cases__item {
-  display: flex;
-  flex-direction: column;
+  padding: 10px 20px 10px;
+  //display: flex;
+  //flex-direction: column;
 }
 
 .cases__info {
-  display: flex;
-  flex-direction: column;
+  //display: flex;
+  //flex-direction: column;
 }
 
 .cases__title {
@@ -28,7 +31,7 @@
 
 .cases__description {
   @include clear-margin-padding;
-  margin-top: 20px;
+  margin-top: 23px;
 
   color: $gray;
   font-family: $font-family-secondary;
@@ -38,11 +41,14 @@
 }
 
 .cases__result-list {
+  @include clear-margin-padding;
+  margin-top: 25px;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 .cases__result-item {
@@ -141,7 +147,7 @@
 }
 
 .cases__widget {
-  margin-top: 20px;
+  margin-top: 33px;
 }
 
 .cases__img {

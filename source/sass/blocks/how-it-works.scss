@@ -4,6 +4,8 @@
 
 .how-it-works__title {
   @include clear-margin-padding;
+  margin-top: 10px;
+
   color: $verydarkgray;
   font-size: 36px;
   font-weight: 400;
@@ -14,8 +16,8 @@
   @include clear-ul-format;
   margin: 0;
   margin-top: 29px;
-  display: flex;
-  flex-direction: column;
+  //display: flex;
+  //flex-direction: column;
 }
 
 .how-it-works__item {

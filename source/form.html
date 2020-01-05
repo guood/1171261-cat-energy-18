@@ -11,10 +11,12 @@
   <body>
     <header class="page-header container">
       <nav class="page-header__main-nav main-nav">
-        <a href="index.html" class="main-nav__logo logo" aria-label="Логотип кэт энержи.">
-          <img src="img/logo-mobile.svg" alt="Логотип магазина кэт энержи" class="logo__img" width="191" height="38">
-        </a>
-        <button class="main-nav__toggle" aria-label="Открыть меню"></button>
+        <div class="main-nav__logo-wrapper">
+          <a href="index.html" class="main-nav__logo logo" aria-label="Логотип кэт энержи.">
+            <img src="img/logo-mobile.svg" alt="Логотип магазина кэт энержи" class="logo__img" width="191" height="38">
+          </a>
+          <button class="main-nav__toggle" aria-label="Открыть меню"></button>
+        </div>
         <ul class="main-nav__site-list site-list">
           <li class="site-list__item"><a href="index.html" class="site-list__item-link">Главная</a></li>
           <li class="site-list__item"><a href="catalog.html" class="site-list__item-link">Каталог продукции</a></li>
@@ -71,7 +73,7 @@
           </fieldset>
           <div class="choice-program-form__comments-fieldset">
             <label for="comments" class="choice-program-form__legend">Комментарий</label>
-            <textarea name="comments" id="comments" class="choice-program-form__comments" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea name="comments" id="comments" class="choice-program-form__comments" cols="20" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
           <fieldset class="choice-program-form__additional-fieldset">
             <legend class="choice-program-form__legend">Дополнительно</legend>
@@ -99,43 +101,49 @@
         </form>
       </section>
     </main>
-    <footer class="page-footer container">
-      <section class="page-footer__contacts contacts contacts--background-gray">
+    <footer class="page-footer">
+      <section class="page-footer__contacts contacts">
         <h2 class="visually-hidden">Контакты магазина кэт энержи</h2>
         <div class="contacts__info">
-          <p class="contacts__dealer-invitation">
-            Приглашаем к сотрудничеству дилеров!
-          </p>
-          <div class="contacts__address">
-            <p class="contacts__street">
-              ул. Большая Конюшенная, д. 19/8
+          <div class="contacts__info-content">
+            <p class="contacts__dealer-invitation">
+              Приглашаем к сотрудничеству дилеров!
             </p>
-            <p class="contacts__city">Санкт-Петербург</p>
+            <div class="contacts__address">
+              <p class="contacts__street">
+                ул. Большая Конюшенная, д. 19/8
+              </p>
+              <p class="contacts__city">Санкт-Петербург</p>
+            </div>
           </div>
         </div>
-        <img src="img/bg-map-mobile@1x.png" alt="Офис магазина кэт энержи на карте" class="contacts__map">
+        <article class="contacts__map contacts-map">
+          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afa7a238db43c079296dfb3e334d04075b16c3cf4c3f3c53a03a6ee13e4d4220e&amp;lang=ru_RU&amp;scroll=true"></script>
+        </article>
       </section>
       <section class="page-footer__info footer-info">
         <h2 class="visually-hidden">Секция информация в подвале</h2>
-        <a class="footer-info__logo" aria-label="Логотип магазина кэт энержи">
-          <img src="img/logo-footer.svg" width="128" height="24" alt="Логотип кэт энержи" class="footer-info__img">
-        </a>
-        <ul class="footer-info__social social">
-          <li class="social__item">
-            <a href="" class="social__link social__link--vk" aria-label="Кэт энержи в вконтакте"></a>
-          </li>
-          <li class="social__item">
-            <a href="" class="social__link social__link--ins" aria-label="Кэт энержи в инстаграм"></a>
-          </li>
-          <li class="social__item">
-            <a href="" class="social__link social__link--fb" aria-label="Кэт энержи в фейсбук"></a>
-          </li>
-        </ul>
-        <div class="footer-info__copyright copyright">
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">HTML Academy</a>
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__logo-link">
-            <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип htmlacademy" class="copyright__logo-img">
+        <div class="footer-info__content-wrapper container">
+          <a class="footer-info__logo" aria-label="Логотип магазина кэт энержи">
+            <img src="img/logo-footer.svg" width="128" height="24" alt="Логотип кэт энержи" class="footer-info__img">
           </a>
+          <ul class="footer-info__social social">
+            <li class="social__item">
+              <a href="" class="social__link social__link--vk" aria-label="Кэт энержи в вконтакте"></a>
+            </li>
+            <li class="social__item">
+              <a href="" class="social__link social__link--ins" aria-label="Кэт энержи в инстаграм"></a>
+            </li>
+            <li class="social__item">
+              <a href="" class="social__link social__link--fb" aria-label="Кэт энержи в фейсбук"></a>
+            </li>
+          </ul>
+          <div class="footer-info__copyright copyright">
+            <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">HTML Academy</a>
+            <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__logo-link">
+              <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип htmlacademy" class="copyright__logo-img">
+            </a>
+          </div>
         </div>
       </section>
     </footer>

@@ -1,15 +1,5 @@
 .page-footer {
   background-color: $lightgray;
-  display: flex;
-  flex-direction: column;
-
-  /* временно */
-  background: transparent;
-}
-
-.page-footer__info {
-  padding-left: $mobile-margins;
-  padding-right: $mobile-margins;
 }
 
 @media (min-width: $tablet-width) {

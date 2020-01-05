@@ -16,3 +16,12 @@
 .copyright__logo-img {
   display: block;
 }
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    width: 162px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+}

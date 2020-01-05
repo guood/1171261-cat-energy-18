@@ -1,13 +1,17 @@
-.contacts {
+.contacts__info {
+  background-color: $lightgray;
+
   &--background-white {
     background-color: $white;
   }
 }
 
-.contacts__info {
+.contacts__info-content {
   display: flex;
   justify-content: space-between;
-  padding: 30px 20px 26px;
+  padding: 30px $mobile-margins 26px;
+  width: $mobile-width;
+  margin: 0 auto;
 }
 
 .contacts__dealer-invitation {
@@ -22,8 +26,8 @@
 
 .contacts__address {
   @include clear-margin-padding;
-  display: flex;
-  flex-direction: column;
+  //display: flex;
+  //flex-direction: column;
 
   color: $gray;
   font-family: $font-family-secondary;
@@ -38,14 +42,10 @@
   @include clear-margin-padding;
 }
 
-.contacts__map {
-  display: block;
-  height: 360px;
-}
-
 @media (min-width: $tablet-width) {
-  .contacts__info {
-    padding: 69px 72px 62px;
+  .contacts__info-content {
+    width: $tablet-width;
+    padding: 65px 72px 62px;
   }
 
   .contacts__dealer-invitation {
@@ -62,10 +62,6 @@
   .contacts__city {
     margin-top: 20px;
   }
-
-  .contacts__map {
-    height: 395px;
-  }
 }
 
 @media (min-width: $desktop-width) {
@@ -73,7 +69,7 @@
     position: relative;
   }
 
-  .contacts__info {
+  .contacts__info-content {
     position: absolute;
 
     background-color: $white;
@@ -91,9 +87,5 @@
     text-align: left;
     margin-left: 95px;
     margin-top: -5px;
-  }
-
-  .contacts__map {
-    height: 400px;
   }
 }

@@ -1,8 +1,8 @@
 .aims__aim-list {
   @include clear-ul-format;
   margin: 0;
-  display: flex;
-  flex-direction: column;
+  //display: flex;
+  //flex-direction: column;
 }
 
 .aims__aim-item {
@@ -12,8 +12,8 @@
 
   min-height: 266px;
 
-  display: flex;
-  flex-direction: column;
+  //display: flex;
+  //flex-direction: column;
 }
 
 .aims__aim-title {
@@ -31,14 +31,16 @@
 
 .aims__description {
   @include clear-margin-padding;
+  margin-top: 28px;
+  padding-bottom: 23px;
+
   color: $gray;
   font-family: $font-family-secondary;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
 
-  margin-top: 28px;
-  padding: 0;
+  border-bottom: 1px solid $lightgray5;
 }
 
 .aims__aim-link {
@@ -50,10 +52,7 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  margin-top: auto;
-  padding-top: 19px;
-
-  border-top: 1px solid $lightgray;
+  margin-top: 18px;
 }
 
 @media (min-width: $tablet-width) {

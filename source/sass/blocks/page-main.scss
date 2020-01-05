@@ -1,3 +1,7 @@
+.page-main {
+
+}
+
 .page-main__title {
   @include clear-margin-padding;
   margin-top: 17px;
@@ -16,7 +20,7 @@
 }
 
 .page-main__how-it-works {
-  margin: 10px $mobile-margins 0;
+  padding: 10px $mobile-margins 0;
 }
 
 .page-main__cases {

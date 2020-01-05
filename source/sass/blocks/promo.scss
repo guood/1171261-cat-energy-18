@@ -1,0 +1,46 @@
+.promo {
+  padding-top: 190px;
+  width: 280px;
+  min-height: 289px;
+
+  background-color: $green;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+}
+
+.promo__description {
+  @include clear-margin-padding;
+
+  color: $white;
+  font-family: $font-family-secondary;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+
+  text-align: center;
+  width: 160px;
+  margin: 0 auto;
+}
+
+.promo__link {
+  text-decoration: none;
+}
+
+@media (min-width: $tablet-width) {
+  .promo {
+    min-height: 200px;
+    width: 708px;
+    padding: 72px 125px 69px 425px;
+  }
+
+  .promo__description {
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo {
+    width: 245px;
+    min-height: 289px;
+  }
+
+}

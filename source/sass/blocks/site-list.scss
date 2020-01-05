@@ -1,8 +1,6 @@
 .site-list {
   @include clear-ul-format;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+  padding-top: 6px;
 }
 
 .site-list__item {
@@ -27,6 +25,7 @@
 
 @media (min-width: $tablet-width) {
   .site-list {
+    display: flex;
     flex-direction: row;
     flex-grow: 0;
   }
