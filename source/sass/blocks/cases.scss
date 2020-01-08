@@ -1,12 +1,12 @@
 .cases {
   padding-top: 5px;
-  padding-bottom: 22px;
+  padding-bottom: 25px;
   background-color: $lightgray;
   //padding: 15px $mobile-margins 30px;
 }
 
 .cases__item {
-  padding: 10px 20px 10px;
+  padding: 10px $mobile-margins 10px;
   //display: flex;
   //flex-direction: column;
 }
@@ -31,7 +31,7 @@
 
 .cases__description {
   @include clear-margin-padding;
-  margin-top: 23px;
+  margin-top: 26px;
 
   color: $gray;
   font-family: $font-family-secondary;
@@ -47,8 +47,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
-  margin-top: 25px;
 }
 
 .cases__result-item {
@@ -147,6 +145,8 @@
 }
 
 .cases__widget {
+  position: relative;
+  margin: 0;
   margin-top: 33px;
 }
 
@@ -167,10 +167,13 @@
 
 @media (min-width: $tablet-width) {
   .cases {
-    padding: 30px $tablet-margins 50px;
-    align-items: flex-start;
+    padding: 30px $tablet-margins 57px;
     background-color: inherit;
     background-image: linear-gradient(to top, $lightgray 462px, transparent 462px);
+  }
+
+  .cases__item {
+    padding: 15px $tablet-margins 10px;
   }
 
   .cases__title {
@@ -182,10 +185,12 @@
     margin-top: 63px;
     font-size: 16px;
     line-height: 24px;
+
+    width: 680px;
   }
 
   .cases__result-list {
-    margin-top: 53px;
+    margin-top: 54px;
   }
 
   .cases__result-item {
@@ -194,11 +199,11 @@
 
     &--cost {
       @include clear-margin-padding;
-      display: flex;
-      flex-direction: column;
+      display: block;
+      align-self: center;
+      text-align: left;
 
       margin-left: auto;
-
 
       font-family: $font-family-base;
     }
@@ -212,6 +217,16 @@
     display: block;
     font-size: 30px;
     line-height: 37px;
+
+    &--cost {
+      @include clear-margin-padding;
+      font-size: 20px;
+      line-height: 20px;
+
+      text-align: right;
+
+      margin-top: 10px;
+    }
   }
 
   .cases__result-name {
@@ -224,6 +239,14 @@
     line-height: 14px;
 
     margin-top: 4px;
+
+    &--cost {
+      @include clear-margin-padding;
+      font-size: 20px;
+      line-height: 20px;
+      text-align: right;
+      max-width: none;
+    }
   }
 
   .cases__widget {
@@ -240,23 +263,28 @@
 @media (min-width: $desktop-width) {
   .cases {
     padding: 0;
-    padding-bottom: 60px;
-    align-items: flex-start;
+    padding-top: 10px;
+    padding-bottom: 55px;
   }
 
   .cases__item {
+    padding-left: $desktop-margins;
+    padding-right: $desktop-margins;
+    display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
   }
 
   .cases__info {
-    width: 450px;
+    @include clear-margin-padding;
+    padding-top: 45px;
   }
 
   .cases__widget {
     @include clear-margin-padding;
-    width: 680px;
     padding-top: 20px;
+    width: 768px;
   }
 
   .cases__title {
@@ -264,6 +292,7 @@
   }
 
   .cases__description {
+    width: 435px;
     margin-top: 145px;
   }
 
@@ -280,7 +309,9 @@
     }
 
     &--cost {
-      width: auto;
+      margin-right: auto;
+
+      width: 330px;
       flex-direction: row;
     }
 
@@ -318,5 +349,10 @@
 
       margin-left: 64px;
     }
+  }
+
+  .cases__img {
+    width: 768px;
+    text-align: center;
   }
 }

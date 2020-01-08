@@ -2,11 +2,6 @@
   padding-top: 10px;
 }
 
-.additional-products__wrapper {
-  //display: flex;
-  //flex-direction: column;
-}
-
 .additional-products__title {
   @include clear-margin-padding;
   padding-bottom: 34px;
@@ -21,9 +16,6 @@
 
 .additional-products__list {
   @include clear-margin-padding;
-
-  //display: flex;
-  //flex-direction: column;
 }
 
 .additional-products__item {
@@ -98,10 +90,16 @@
     display: flex;
     flex-wrap: wrap;
 
-    //min-height: 139px;
     border: 1px solid $lightgray3;
     border-top: none;
     padding: 28px 37px 27px;
+  }
+
+  .additional-products__name {
+    @include clear-margin-padding;
+
+    font-size: 20px;
+    line-height: 20px;
   }
 
   .additional-products__characteristics {
@@ -123,7 +121,7 @@
   }
 
   .additional-products__button {
-    margin-top: 19px;
+    margin-top: 20px;
     width: 633px;
   }
 
@@ -135,7 +133,6 @@
 @media (min-width: $desktop-width) {
   .additional-products__wrapper {
     flex-direction: row;
-
     margin-top: 80px;
   }
 
@@ -159,7 +156,40 @@
 
   .additional-products__item {
     @include clear-margin-padding;
-    min-height: 72px;
-    justify-content: space-between;
+    min-height: auto;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .additional-products__name {
+    @include clear-margin-padding;
+    width: 325px;
+  }
+
+  .additional-products__characteristics {
+    margin: 0;
+    margin-top: 7px;
+    width: 300px;
+  }
+
+  .additional-products__amount {
+    text-align: left;
+    width: 270px;
+  }
+
+  .additional-products__price {
+    text-align: left;
+    width: 60px;
+  }
+
+  .additional-products__button {
+    // отступ сверху и снизу задает высоту области.
+    // min-height для всей ячейки использвать не получилось - в ie11 не работает align-items
+    margin: 16px 0 15px auto;
+    width: 245px;
+  }
+
+  .additional-products__wrapper {
+    display: flex;
   }
 }

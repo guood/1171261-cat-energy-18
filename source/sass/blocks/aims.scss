@@ -1,8 +1,6 @@
 .aims__aim-list {
   @include clear-ul-format;
   margin: 0;
-  //display: flex;
-  //flex-direction: column;
 }
 
 .aims__aim-item {
@@ -11,9 +9,6 @@
   margin-top: 20px;
 
   min-height: 266px;
-
-  //display: flex;
-  //flex-direction: column;
 }
 
 .aims__aim-title {
@@ -61,6 +56,9 @@
     padding: 75px 280px 62px 52px;
     min-height: 371px;
 
+    display: flex;
+    flex-direction: column;
+
     & + & {
       margin-top: 30px;
     }
@@ -77,19 +75,23 @@
 
     font-size: 16px;
     line-height: 24px;
+
+    border-bottom: none;
   }
 
   .aims__aim-link {
-    padding: 0;
     border: none;
 
     font-size: 20px;
     line-height: 20px;
+
+    margin-top: auto;
   }
 }
 
 @media (min-width: $desktop-width) {
   .aims__aim-list {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -114,7 +116,4 @@
     margin-top: 75px;
   }
 
-  .aims__aim-link {
-    margin-top: 30px;
-  }
 }

@@ -137,7 +137,11 @@
 
 @media (min-width: $desktop-width) {
   .catalog__product-list {
-    margin: 0;
+    margin: 0 $desktop-margins;
+  }
+
+  .catalog__product-info {
+    text-align: center;
   }
 
   .catalog__product {
@@ -145,11 +149,21 @@
     min-height: 571px;
   }
 
+  .catalog__product-name {
+    margin: 0 auto;
+    text-align: center;
+  }
+
   .catalog__order-button {
     width: 169px;
   }
 
+  .catalog__show-all-button {
+    width: 169px;
+  }
+
   .catalog__show-more {
+    text-align: center;
     width: 245px;
     min-height: 431px;
   }

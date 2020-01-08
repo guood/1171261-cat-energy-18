@@ -96,13 +96,19 @@
   }
 
   .main-banner__button {
+    min-height: 52px;
+    width: 245px;
     margin-top: 48px;
+    padding-top: 16px;
+
+    font-size: 20px;
+    line-height: 20px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .main-banner {
-    padding-left: 190px;
+    padding-left: 120px;
     padding-right: 50%;
 
     min-height: 583px;

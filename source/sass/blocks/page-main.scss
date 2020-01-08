@@ -1,7 +1,3 @@
-.page-main {
-
-}
-
 .page-main__title {
   @include clear-margin-padding;
   margin-top: 17px;
@@ -46,7 +42,7 @@
     margin-left: $tablet-margins;
     margin-right: $tablet-margins;
 
-    boeder: none;
+    border: none;
 
     font-size: 60px;
     line-height: 60px;
@@ -57,7 +53,7 @@
   }
 
   .page-main__how-it-works {
-    margin: 45px $tablet-margins 0;
+    padding: 45px $tablet-margins 0;
   }
 
   .page-main__cases {
@@ -91,16 +87,18 @@
   }
 
   .page-main__how-it-works {
-    margin: 70px $desktop-margins 0;
+    margin-top: 27px;
+    padding: 70px $desktop-margins 0;
   }
 
   .page-main__cases {
-    margin: 0 $desktop-margins 0;
+    margin-top: 0;
+    padding: 0 $desktop-margins 0;
   }
 
   .page-main__catalog {
-    margin-left: $desktop-margins;
-    margin-right: $desktop-margins;
+    padding-left: $desktop-margins;
+    padding-right: $desktop-margins;
   }
 
   .page-main__additional-products {
