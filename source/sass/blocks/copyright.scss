@@ -1,5 +1,7 @@
 .copyright {
-  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .copyright__link {
@@ -13,4 +15,13 @@
 
 .copyright__logo-img {
   display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    width: 162px;
+  }
+}
+
+@media (min-width: $desktop-width) {
 }

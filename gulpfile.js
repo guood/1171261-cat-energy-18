@@ -9,7 +9,13 @@ var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 
 gulp.task("css", function () {
-  return gulp.src("source/sass/style.scss")
+  /* временно добавлены стили, которые задают нужные фоновые изображения для верстки страниц
+  *  TODO в финальной версии останется только style.scss*/
+  return gulp.src(["source/sass/style.scss",
+                    "source/sass/dev/index-dev.scss",
+                    "source/sass/dev/catalog-dev.scss",
+                    "source/sass/dev/form-dev.scss"
+                  ])
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())

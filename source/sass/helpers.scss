@@ -2,7 +2,7 @@
   box-sizing: content-box;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
 
   width: 1px;
@@ -19,6 +19,18 @@
 }
 
 .container {
-  width: 320px;
+  width: $mobile-width;
   margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .container {
+    width: $tablet-width;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .container {
+    width: $desktop-width;
+  }
 }

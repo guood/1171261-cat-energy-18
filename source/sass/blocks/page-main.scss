@@ -1,5 +1,10 @@
 .page-main__title {
-  margin: 0 20px;
+  @include clear-margin-padding;
+  margin-top: 17px;
+  padding: 0 $mobile-margins 0;
+
+  border-bottom: 1px solid $lightgray3;
+
   color: $verydarkgray;
   font-size: 36px;
   font-weight: 400;
@@ -7,17 +12,100 @@
 }
 
 .page-main__aims {
-  margin: 0 20px;
+  padding: 2px $mobile-margins 0;
 }
 
 .page-main__how-it-works {
-  margin: 0 20px 42px;
+  padding: 10px $mobile-margins 0;
+}
+
+.page-main__cases {
+  margin: 43px 0 0;
+}
+
+.page-main__catalog {
+  margin-top: 27px;
 }
 
 .page-main__additional-products {
-  margin: 20px;
+  margin: 18px $mobile-margins 0;
 }
 
-.page-main__action {
-  margin: 39px 20px 35px;
+.page-main__choice-program-form {
+  margin: 18px $mobile-margins 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-main__title {
+    @include clear-margin-padding;
+    padding: 57px 0 0;
+    margin-left: $tablet-margins;
+    margin-right: $tablet-margins;
+
+    border: none;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .page-main__aims {
+    padding: 2px $tablet-margins 0;
+  }
+
+  .page-main__how-it-works {
+    padding: 45px $tablet-margins 0;
+  }
+
+  .page-main__cases {
+    margin-top: 58px;
+  }
+
+  .page-main__catalog {
+    margin-top: 27px;
+  }
+
+  .page-main__additional-products {
+    margin: 55px 0 0;
+  }
+
+  .page-main__choice-program-form {
+    margin: 50px 67px 70px 71px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main__title {
+    margin: 17px $desktop-margins 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    border-bottom: 1px solid $lightgray3;
+  }
+
+  .page-main__aims {
+    padding: 0 $desktop-margins;
+  }
+
+  .page-main__how-it-works {
+    margin-top: 27px;
+    padding: 70px $desktop-margins 0;
+  }
+
+  .page-main__cases {
+    margin-top: 0;
+    padding: 0 $desktop-margins 0;
+  }
+
+  .page-main__catalog {
+    padding-left: $desktop-margins;
+    padding-right: $desktop-margins;
+  }
+
+  .page-main__additional-products {
+    margin: 75px $desktop-margins 85px;
+  }
+
+  .page-main__choice-program-form {
+    margin: 50px $desktop-margins 80px;
+  }
 }

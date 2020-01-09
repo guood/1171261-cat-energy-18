@@ -1,15 +1,33 @@
+.additional-products {
+  padding-top: 10px;
+}
+
 .additional-products__title {
+  @include clear-margin-padding;
+  padding-bottom: 34px;
+
   color: $verydarkgray;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
+
+  border-bottom: 1px solid $lightgray2;
 }
 
 .additional-products__list {
-  @include clear-ul-format;
+  @include clear-margin-padding;
+}
+
+.additional-products__item {
+  min-height: 129px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $lightgray2;
 }
 
 .additional-products__name {
+  @include clear-margin-padding;
+
   color: $darkgray;
   font-size: 16px;
   font-weight: 400;
@@ -17,9 +35,17 @@
   text-transform: uppercase;
 }
 
+.additional-products__characteristics {
+  @include clear-margin-padding;
+  margin-top: 10px;
+  width: 100%;
+}
+
+
 .additional-products__amount,
 .additional-products__price {
-  @include clear-padding-margin;
+  @include clear-margin-padding;
+
   color: $gray;
   font-family: $font-family-secondary;
   font-size: 14px;
@@ -27,6 +53,143 @@
   line-height: 14px;
 }
 
+.additional-products__price {
+  text-align: right;
+}
+
 .additional-products__name-link {
   text-decoration: none;
+}
+
+.additional-products__button {
+  margin-top: 14px;
+}
+
+.additional-products__promo {
+  margin-top: 39px;
+  margin-bottom: 35px;
+}
+
+@media (min-width: $tablet-width) {
+  .additional-products {
+    padding: 10px $tablet-margins 40px;
+  }
+
+  .additional-products__title {
+    padding-left: 38px;
+    padding-bottom: 80px;
+
+    font-size: 36px;
+    line-height: 36px;
+    color: $darkgray;
+
+    border-bottom: 1px solid $lightgray3;
+  }
+
+  .additional-products__item {
+    display: flex;
+    flex-wrap: wrap;
+
+    border: 1px solid $lightgray3;
+    border-top: none;
+    padding: 28px 37px 27px;
+  }
+
+  .additional-products__name {
+    @include clear-margin-padding;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .additional-products__characteristics {
+    @include clear-margin-padding;
+    width: 250px;
+    margin-left: auto;
+  }
+
+  .additional-products__amount,
+  .additional-products__price {
+    @include clear-margin-padding;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  .additional-products__price {
+    width: 90px;
+  }
+
+  .additional-products__button {
+    margin-top: 20px;
+    width: 633px;
+  }
+
+  .additional-products__promo {
+    margin-top: 69px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additional-products__wrapper {
+    flex-direction: row;
+    margin-top: 80px;
+  }
+
+  .additional-products__list {
+    width: 900px;
+  }
+
+  .additional-products {
+    padding: 0;
+  }
+
+  .additional-products__title {
+    @include clear-margin-padding;
+    margin-top: 10px;
+  }
+
+  .additional-products__promo {
+    @include clear-margin-padding;
+    margin-left: auto;
+  }
+
+  .additional-products__item {
+    @include clear-margin-padding;
+    min-height: auto;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .additional-products__name {
+    @include clear-margin-padding;
+    width: 325px;
+  }
+
+  .additional-products__characteristics {
+    margin: 0;
+    margin-top: 7px;
+    width: 300px;
+  }
+
+  .additional-products__amount {
+    text-align: left;
+    width: 270px;
+  }
+
+  .additional-products__price {
+    text-align: left;
+    width: 60px;
+  }
+
+  .additional-products__button {
+    // отступ сверху и снизу задает высоту области.
+    // min-height для всей ячейки использвать не получилось - в ie11 не работает align-items
+    margin: 16px 0 15px auto;
+    width: 245px;
+  }
+
+  .additional-products__wrapper {
+    display: flex;
+  }
 }

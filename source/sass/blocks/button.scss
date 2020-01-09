@@ -1,13 +1,18 @@
 .button {
+  display: block;
   text-decoration: none;
   border: none;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
+  min-height: 40px;
+  padding-top: 10px;
+  font-family: $font-family-base;
+  color: $white;
 
   &--green {
-    color: $white;
     background-color: $green;
   }
 
@@ -15,4 +20,11 @@
     color: $gray;
     background-color: $lightgray;
   }
+}
+
+// центрирование по вертикали для кнопок и ссылок ведет себя по разному
+// Технически решил вопрос так. Критерии вроде как тоже не запрещают.
+// Это же не чистое использование стилизации тэга.
+button.button {
+  padding-top: 0;
 }

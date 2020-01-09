@@ -1,17 +1,22 @@
 .aims__aim-list {
   @include clear-ul-format;
+  margin: 0;
 }
 
 .aims__aim-item {
   background-color: $lightgray;
   padding: 22px 20px;
+  margin-top: 20px;
 
-  & + & {
-    margin-top: 20px;
-  }
+  min-height: 266px;
 }
 
 .aims__aim-title {
+  @include clear-margin-padding;
+  display: block;
+  padding-left: 72px;
+  margin-top: 8px;
+
   color: $verydarkgray;
   font-size: 24px;
   font-weight: 400;
@@ -20,18 +25,95 @@
 }
 
 .aims__description {
+  @include clear-margin-padding;
+  margin-top: 28px;
+  padding-bottom: 23px;
+
   color: $gray;
   font-family: $font-family-secondary;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
+
+  border-bottom: 1px solid $lightgray5;
 }
 
 .aims__aim-link {
+  display: block;
   color: $verydarkgray;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
   text-transform: uppercase;
   text-decoration: none;
+
+  margin-top: 18px;
+}
+
+@media (min-width: $tablet-width) {
+  .aims__aim-item {
+    margin-top: 0;
+    padding: 75px 280px 62px 52px;
+    min-height: 371px;
+
+    display: flex;
+    flex-direction: column;
+
+    & + & {
+      margin-top: 30px;
+    }
+  }
+
+  .aims__aim-title {
+    @include clear-margin-padding;
+
+    font-size: 36px;
+  }
+
+  .aims__description {
+    margin-top: 26px;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    border-bottom: none;
+  }
+
+  .aims__aim-link {
+    border: none;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    margin-top: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .aims__aim-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .aims__aim-item {
+    width: 570px;
+    min-height: 372px;
+    padding: 75px 52px 62px;
+    margin-top: 80px;
+
+    & + & {
+      margin-top: 80px;
+      margin-left: 80px;
+    }
+  }
+
+  .aims__aim-title {
+    margin-left: 164px;
+  }
+
+  .aims__description {
+    margin-top: 75px;
+  }
+
 }

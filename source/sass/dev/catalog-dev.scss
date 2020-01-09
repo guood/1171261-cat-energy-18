@@ -1,0 +1,18 @@
+@import "../variables";
+@import "outline";
+
+body {
+  background: url("../img/dev/cat-energy-catalog-mobile.psd.png") no-repeat 50% 0;
+}
+
+@media (min-width: $tablet-width) {
+  body {
+    background: url("../img/dev/cat-energy-catalog-tablet.psd.png") no-repeat 50% 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  body {
+    background: url("../img/dev/cat-energy-catalog-desktop.psd.png") no-repeat 50% 0;
+  }
+}

@@ -1,9 +1,23 @@
 .cases {
+  padding-top: 5px;
+  padding-bottom: 25px;
   background-color: $lightgray;
-  padding: 20px;
+  //padding: 15px $mobile-margins 30px;
+}
+
+.cases__item {
+  padding: 10px $mobile-margins 10px;
+  //display: flex;
+  //flex-direction: column;
+}
+
+.cases__info {
+  //display: flex;
+  //flex-direction: column;
 }
 
 .cases__title {
+  @include clear-margin-padding;
   color: $verydarkgray;
   font-size: 36px;
   font-weight: 400;
@@ -12,9 +26,13 @@
 
 .cases__list {
   @include clear-ul-format;
+  margin: 0;
 }
 
 .cases__description {
+  @include clear-margin-padding;
+  margin-top: 26px;
+
   color: $gray;
   font-family: $font-family-secondary;
   font-size: 14px;
@@ -22,21 +40,77 @@
   line-height: 18px;
 }
 
+.cases__result-list {
+  @include clear-margin-padding;
+  margin-top: 25px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cases__result-item {
+  position: relative;
+  width: 125px;
+  padding-top: 13px;
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 1px solid $lightgray2;
+  border-radius: 3px;
+
+  &--cost {
+    @include clear-margin-padding;
+    margin-top: 35px;
+
+    flex-grow: 1;
+    flex-direction: row;
+    text-align: center;
+
+    border: none;
+    width: auto;
+  }
+}
+
 .cases__result-name {
+  position: relative;
   margin: 0;
-  padding: 0;
+  margin-top: -7px;
+  padding: 0 5px;
   color: $gray;
   font-family: $font-family-secondary;
   font-size: 12px;
   font-weight: 400;
   line-height: 12px;
+  text-transform: lowercase;
+
+  top: 16px;
+  max-width: 87px;
+
+  background-color: $lightgray;
+
+  order: 1;
 
   &--cost {
+    @include clear-margin-padding;
+    position: static;
     display: inline;
+    order: 0;
+
+    width: auto;
+    max-width: none;
+    margin-left: auto;
+
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
     font-family: $font-family-base;
+    text-transform: uppercase;
+
+    background-color: transparent;
   }
 }
 
@@ -50,6 +124,10 @@
   text-transform: uppercase;
 
   &--cost {
+    @include clear-margin-padding;
+
+    margin-right: auto;
+
     display: inline;
     font-size: 14px;
     font-weight: 400;
@@ -58,15 +136,223 @@
   }
 }
 
-.cases__result-item--cost {
-  text-align: left;
-}
-
-
 .cases__toggle-button {
   color: $verydarkgray;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+}
+
+.cases__widget {
+  position: relative;
+  margin: 0;
+  margin-top: 33px;
+}
+
+.cases__img {
+  display: block;
+  height: 232px;
+}
+
+.cases__img--after {
+  display: none;
+}
+
+.cases__toggle {
+  display: flex;
+
+  margin-top: 35px;
+}
+
+@media (min-width: $tablet-width) {
+  .cases {
+    padding: 30px $tablet-margins 57px;
+    background-color: inherit;
+    background-image: linear-gradient(to top, $lightgray 462px, transparent 462px);
+  }
+
+  .cases__item {
+    padding: 15px $tablet-margins 10px;
+  }
+
+  .cases__title {
+    font-size: 60px;
+    margin-top: 15px;
+  }
+
+  .cases__description {
+    margin-top: 63px;
+    font-size: 16px;
+    line-height: 24px;
+
+    width: 680px;
+  }
+
+  .cases__result-list {
+    margin-top: 54px;
+  }
+
+  .cases__result-item {
+    width: 162px;
+    padding-top: 15px;
+
+    &--cost {
+      @include clear-margin-padding;
+      display: block;
+      align-self: center;
+      text-align: left;
+
+      margin-left: auto;
+
+      font-family: $font-family-base;
+    }
+
+    & + & {
+      margin-left: 42px;
+    }
+  }
+
+  .cases__result-value {
+    display: block;
+    font-size: 30px;
+    line-height: 37px;
+
+    &--cost {
+      @include clear-margin-padding;
+      font-size: 20px;
+      line-height: 20px;
+
+      text-align: right;
+
+      margin-top: 10px;
+    }
+  }
+
+  .cases__result-name {
+    display: block;
+    background-color: $white;
+    max-width: 145px;
+    top: 6px;
+
+    font-size: 14px;
+    line-height: 14px;
+
+    margin-top: 4px;
+
+    &--cost {
+      @include clear-margin-padding;
+      font-size: 20px;
+      line-height: 20px;
+      text-align: right;
+      max-width: none;
+    }
+  }
+
+  .cases__widget {
+    margin-top: 90px;
+  }
+
+  .cases__img {
+    height: 499px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .cases {
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 55px;
+  }
+
+  .cases__item {
+    padding-left: $desktop-margins;
+    padding-right: $desktop-margins;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .cases__info {
+    @include clear-margin-padding;
+    padding-top: 45px;
+  }
+
+  .cases__widget {
+    @include clear-margin-padding;
+    padding-top: 20px;
+    width: 768px;
+  }
+
+  .cases__title {
+    margin-top: 72px;
+  }
+
+  .cases__description {
+    width: 435px;
+    margin-top: 145px;
+  }
+
+  .cases__result-list {
+    width: 366px;
+    margin-top: 70px;
+  }
+
+  .cases__result-item {
+    @include clear-margin-padding;
+
+    & + & {
+      @include clear-margin-padding;
+    }
+
+    &--cost {
+      margin-right: auto;
+
+      width: 330px;
+      flex-direction: row;
+    }
+
+    &:last-child {
+      margin-top: 60px;
+    }
+  }
+
+  .cases__result-name {
+    background-color: $lightgray;
+    margin-top: 7px;
+
+    &--cost {
+      @include clear-margin-padding;
+      display: inline;
+      text-align: left;
+
+      max-width: none;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  .cases__result-value {
+    margin-top: 14px;
+
+    &--cost {
+      @include clear-margin-padding;
+      display: inline;
+
+      text-align: left;
+
+      font-size: 20px;
+      line-height: 20px;
+
+      margin-left: 64px;
+    }
+  }
+
+  .cases__img {
+    width: 768px;
+    text-align: center;
+  }
 }
