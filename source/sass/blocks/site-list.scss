@@ -34,13 +34,13 @@
     padding-top: 0;
   }
 
+  .site-list__item {
+    border: none;
+  }
+
   .site-list__item-link {
     padding: 0;
     padding-bottom: 10px;
-  }
-
-  .site-list__item {
-    border: none;
     color: $darkgray;
     font-size: 18px;
     font-weight: 400;
@@ -58,16 +58,19 @@
   }
 
   .site-list__item-link {
-    color: $white;
-  }
-
-  .site-list__item {
-    color: $white;
     font-size: 20px;
     line-height: 25px;
 
-    &--active-index {
-      border-bottom: 2px solid $white;
+    &--index-page {
+      color: $white;
+    }
+
+    &--active {
+      border-bottom: 2px solid $green;
+    }
+
+    &--index-page {
+      border-bottom-color: $white;
     }
   }
 }
