@@ -21,12 +21,45 @@
 .how-it-works__item {
   @include clear-margin-padding;
 
+  position: relative;
+
   min-height: 60px;
   padding-left: 78px;
   padding-top: 3px;
 
   & + & {
     margin-top: 20px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    left: 0;
+    top: 0;
+
+    background-repeat: no-repeat;
+    background-color: $green;
+
+    background-position: 5px 5px, 0 0;
+    background-size: 50px 50px, 60px 60px;
+  }
+
+  &--healthy-food::before {
+    background-image: url("../img/advantage-leaf@1x.png");
+  }
+
+  &--powder::before {
+    background-image: url("../img/advantage-powder@1x.png");
+  }
+
+  &--functional-nutrition::before {
+    background-image: url("../img/advantage-dining@1x.png");
+  }
+
+  &--deadline::before {
+    background-image: url("../img/advantage-clock@1x.png");
   }
 }
 
@@ -43,6 +76,7 @@
 @media (min-width: $tablet-width) {
   .how-it-works {
     padding-top: 35px;
+    counter-reset: numberOfStep;
   }
 
   .how-it-works__title {
@@ -74,6 +108,32 @@
 
     &:nth-child(n + 3) {
       margin-top: 85px;
+    }
+
+    &::before {
+      width: 80px;
+      height: 80px;
+
+      background-position: 15px 15px, 0 0;
+      background-size: 50px 50px, 80px 80px;
+    }
+
+    &::after {
+      @include clear-margin-padding;
+      counter-increment: numberOfStep;
+      content: counter(numberOfStep);
+
+      position: absolute;
+      z-index: -1;
+
+      left: 112px;
+      top: 0;
+
+      color: $lightgray;
+      font-family: $font-family-base;
+      font-size: 281px;
+      font-weight: 400;
+      line-height: 200px;
     }
   }
 

@@ -153,10 +153,17 @@
 .cases__img {
   display: block;
   height: 232px;
-}
 
-.cases__img--after {
-  display: none;
+  &--before {
+    width: 311px;
+    height: 232px;
+  }
+
+  &--after {
+    display: none;
+    width: 251px;
+    height: 240px;
+  }
 }
 
 .cases__toggle {
@@ -257,6 +264,17 @@
     height: 499px;
     width: 100%;
     text-align: center;
+
+    &--before {
+      width: 677px;
+      height: 499px;
+    }
+
+    &--after {
+      display: none;
+      width: 545px;
+      height: 517px;
+    }
   }
 }
 
@@ -352,7 +370,17 @@
   }
 
   .cases__img {
-    width: 768px;
     text-align: center;
+
+    &--before {
+      width: 677px;
+      height: 499px;
+    }
+
+    &--after {
+      display: none;
+      width: 545px;
+      height: 517px;
+    }
   }
 }
