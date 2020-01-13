@@ -7,7 +7,7 @@
 }
 
 .catalog__product {
-  padding: 0 20px 24px;
+  padding: 0 20px 22px;
   min-height: 209px;
   display: flex;
   flex-wrap: wrap;
@@ -45,8 +45,9 @@
 
 .catalog__characteristic-list {
   @include clear-margin-padding;
-  margin-top: 10px;
+  margin-top: 12px;
   width: 138px;
+  border-collapse: collapse;
 }
 
 .catalog__characteristic-name,
@@ -60,16 +61,37 @@
   line-height: 16px;
 }
 
+.catalog__characteristic-value {
+  text-align: right;
+}
+
 .catalog__order-button {
   min-height: 40px;
   width: 280px;
 }
 
 .catalog__show-more {
+  position: relative;
   padding: 80px 20px 24px;
   min-height: 209px;
   border: 1px solid $lightgray3;
   border-top: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 27px;
+
+    background-image: url("../img/icon-plus-mobile.svg");
+    background-size: 30px 30px;
+    opacity: 0.2;
+  }
+
 }
 
 .catalog__show-more-title {
