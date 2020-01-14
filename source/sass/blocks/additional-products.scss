@@ -109,6 +109,7 @@
 
 @media (min-width: $desktop-width) {
   .additional-products__wrapper {
+    display: flex;
     flex-direction: row;
     margin-top: 80px;
   }
@@ -159,9 +160,5 @@
     // min-height для всей ячейки использвать не получилось - в ie11 не работает align-items
     margin: 16px 0 15px auto;
     width: 245px;
-  }
-
-  .additional-products__wrapper {
-    display: flex;
   }
 }

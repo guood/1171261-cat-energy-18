@@ -147,6 +147,7 @@
 
   .catalog__characteristic-list {
     margin-top: 17px;
+    width: 100%;
   }
 
   .catalog__product-name {
@@ -179,10 +180,6 @@
 
   .catalog__product-info {
     margin-top: auto;
-    width: 100%;
-  }
-
-  .catalog__characteristic-list {
     width: 100%;
   }
 
@@ -247,7 +244,6 @@
     margin: 0 auto;
     margin-top: 85px;
   }
-
 }
 
 @media (min-width: $desktop-width) {

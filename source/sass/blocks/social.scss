@@ -24,17 +24,17 @@
   background-position: 50% 50%;
 
   &--vk {
-    background-image: url(../img/icon-vk.svg);
+    background-image: url("../img/icon-vk.svg");
     background-size: 22px 12px;
   }
 
   &--ins {
-    background-image: url(../img/icon-insta.svg);
+    background-image: url("../img/icon-insta.svg");
     background-size: 16px 16px;
   }
 
   &--fb {
-    background-image: url(../img/icon-fb.svg);
+    background-image: url("../img/icon-fb.svg");
     background-size: 10px 19px;
   }
 }
@@ -62,8 +62,4 @@
       background-size: 14px 28px;
     }
   }
-}
-
-@media (min-width: $desktop-width) {
-
 }
