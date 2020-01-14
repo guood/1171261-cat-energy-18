@@ -46,6 +46,11 @@
     min-height: 200px;
     width: 708px;
     padding: 72px 125px 69px 425px;
+
+    &::before {
+      left: 119px;
+      top: 65px;
+    }
   }
 
   .promo__description {
@@ -58,6 +63,16 @@
     width: 245px;
     min-height: 289px;
     padding: 190px 43px 43px;
+
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 65px;
+    }
+  }
+  
+  .promo__description {
+    text-align: center;
   }
 
 }

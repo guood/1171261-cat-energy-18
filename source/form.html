@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/form-dev.css">
+<!--    <link rel="stylesheet" href="css/form-dev.css">-->
   </head>
   <body>
     <header class="page-header container">
@@ -38,7 +38,7 @@
       <h1 class="page-main__title">Подбор программы</h1>
       <section class="page-main__choice-program-form choice-program-form">
         <h2 class="visually-hidden">Форма подбора программы</h2>
-        <p class="choice-program-form__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <p class="choice-program-form__description">Заполните анкету и мы подберем<br>программу питания для вашего кота</p>
         <form action="https://echo.htmlacademy.ru" class="choice-program-form__form" method="post">
           <ul class="choice-program-form__cat-data-fields">
             <li class="choice-program-form__field choice-program-form__field--text">
@@ -65,11 +65,13 @@
             </li>
             <li class="choice-program-form__field choice-program-form__field--radio">
               <input type="radio" id="aimDontKnow" name="aim" class="choice-program-form__radio" value="i dont know">
-              <label for="aimDontKnow" class="choice-program-form__label">Не знаю (нужен ваш совет)</label>
+              <label for="aimDontKnow" class="choice-program-form__label"`>Не знаю (нужен ваш совет)</label>
             </li>
           </ul>
           <fieldset class="choice-program-form__fieldset choice-program-form__owner-data-fieldset">
-            <legend class="choice-program-form__legend">Контактные данные (владельца кота)</legend>
+            <div class="choice-program-form__legend section-title">
+              <span class="section-title__text">Контактные данные (владельца кота)</span>
+            </div>
             <ul class="choice-program-form__owner-data-fields">
               <li class="choice-program-form__field choice-program-form__field--text choice-program-form__owner-email">
                 <label for="email" class="choice-program-form__label">E-mail:*</label>
@@ -86,7 +88,7 @@
             <textarea name="comments" id="comments" class="choice-program-form__comments" cols="20" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
           <fieldset class="choice-program-form__additional-fieldset">
-            <legend class="choice-program-form__legend">Дополнительно</legend>
+            <div class="choice-program-form__legend">Дополнительно</div>
             <ul class="choice-program-form__field-additional">
               <li class="choice-program-form__field choice-program-form__field--check choice-program-form__field-additional-item">
                 <input type="checkbox" class="choice-program-form__checkbox" id="additionalProductsSweetener" name="additional-products--sweetener" checked>

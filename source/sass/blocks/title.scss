@@ -1,0 +1,66 @@
+.section-title {
+  position: relative;
+
+  @include clear-margin-padding;
+  padding-bottom: 34px;
+
+  color: $verydarkgray;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+
+  border-bottom: 1px solid $lightgray2;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    left: 50%;
+    right: calc(50% - 50vw);
+
+    border-top: 3px solid $green;
+    top: 15px;
+  }
+}
+
+.section-title__text {
+  padding-right: 24px;
+  background-color: $white;
+}
+
+@media (min-width: $tablet-width) {
+  .section-title {
+    padding-bottom: 80px;
+
+    font-size: 36px;
+    line-height: 36px;
+    color: $darkgray;
+
+    border-bottom: 1px solid $lightgray3;
+
+    &::after {
+      left: calc(50% - 49vw);
+      right: calc(50% - 49vw);
+      top: 23px;
+    }
+  }
+
+  .section-title__text {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .section-title {
+    @include clear-margin-padding;
+    margin-top: 10px;
+    border: none;
+  }
+
+  .section-title__text {
+    margin-left: -35px;
+  }
+
+}
