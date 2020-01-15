@@ -129,14 +129,6 @@
   }
 }
 
-.cases__toggle-button {
-  color: $verydarkgray;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  text-transform: uppercase;
-}
-
 .cases__widget {
   margin: 0;
   margin-top: 33px;
@@ -176,10 +168,58 @@
 
 .cases__toggle {
   position: relative;
-  display: flex;
-  width: 200px;
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 210px;
+
+  margin: 0 auto;
+  margin-top: 23px;
   margin-bottom: 38px;
+  border: none;
+}
+
+.cases__toggle-button {
+  color: $verydarkgray;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  border: none;
+  box-shadow: none;
+  background-color: inherit;
+}
+
+.cases__toggle_range {
+  position: relative;
+
+  width: 84px;
+  height: 14px;
+  background-color: $white;
+  border-radius: 6px;
+  border: 1px solid $lightgray6;
+}
+
+.cases__toggle-indicator {
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 35px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: $green;
+
+  &--before,
+  &--middle {
+    left: 6px;
+  }
+
+  &--after {
+    right: 6px;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -295,6 +335,47 @@
       z-index: 1;
     }
   }
+
+  .cases__toggle {
+    width: 582px;
+    margin-top: 20px;
+  }
+
+  .cases__toggle-button {
+    font-size: 20px;
+  }
+
+  .cases__toggle_range {
+    width: 430px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: $lightgray6;
+  }
+
+  .cases__toggle-indicator {
+    width: 34px;
+    height: 34px;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    border: 1px solid $lightgray6;
+    background-color: $white;
+    border-radius: 17px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 13px;
+      top: 13px;
+      width: 8px;
+      height: 8px;
+      border-radius: 4px;
+      background-color: $green;
+    }
+
+    &--middle {
+      left: calc(50% - 16px);
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -399,5 +480,11 @@
     &--before {
       background-image: linear-gradient(to top, $lightgray 322px, $white 322px);
     }
+  }
+
+  .cases__toggle {
+    margin-top: 45px;
+    margin-right: 35px;
+    width: 580px;
   }
 }
