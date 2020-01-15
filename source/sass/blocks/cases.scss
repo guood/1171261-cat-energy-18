@@ -148,41 +148,29 @@
   position: relative;
   width: 320px;
   height: 240px;
-  box-shadow: inset 0 0 0 1px #68b738;
 }
 
 .cases__img {
+  max-width: none;
   width: 320px;
   height: 240px;
-
-  &--before {
-    display: block;
-    z-index: 1;
-  }
-
-  &--after {
-    display: block;
-    z-index: 2;
-  }
 }
 
 .cases__widget-frame {
   position: absolute;
-  display: block;
 
   width: 320px;
   height: 240px;
-  left: 0;
-  top: 0;
   overflow: hidden;
 
   &--before {
-    z-index: 1;
+    z-index: 2;
+    background-color: $lightgray;
+    width: 100%;
   }
 
   &--after {
-    z-index: 2;
-    width: 50%;
+    z-index: 1;
   }
 }
 
@@ -201,7 +189,7 @@
     background-image: linear-gradient(to top, $lightgray 462px, transparent 462px);
   }
 
-  .cases__item {
+  .cases__info {
     padding: 15px $tablet-margins 10px;
   }
 
@@ -219,7 +207,7 @@
   }
 
   .cases__result-list {
-    margin-top: 54px;
+    margin-top: 52px;
   }
 
   .cases__result-item {
@@ -279,23 +267,32 @@
   }
 
   .cases__widget {
-    margin-top: 90px;
+    margin-top: 75px;
+  }
+
+  .case__img-wrapper {
+    width: 690px;
+    height: 517px;
+    margin: 0 auto;
   }
 
   .cases__img {
-    height: 499px;
-    width: 100%;
-    text-align: center;
+    width: 690px;
+    height: 517px;
+  }
+
+  .cases__widget-frame {
+    width: 690px;
+    height: 517px;
 
     &--before {
-      width: 677px;
-      height: 499px;
+      z-index: 2;
+      background-image: linear-gradient(to top, $lightgray 346px, $white 346px);
+      width: 50%;
     }
 
     &--after {
-      display: none;
-      width: 545px;
-      height: 517px;
+      z-index: 1;
     }
   }
 }
@@ -304,12 +301,12 @@
   .cases {
     padding: 0;
     padding-top: 10px;
-    padding-bottom: 55px;
+    padding-bottom: 75px;
   }
 
   .cases__item {
     padding-left: $desktop-margins;
-    padding-right: $desktop-margins;
+    padding-right: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -318,13 +315,13 @@
 
   .cases__info {
     @include clear-margin-padding;
-    padding-top: 45px;
+    padding-top: 59px;
   }
 
   .cases__widget {
     @include clear-margin-padding;
-    padding-top: 20px;
-    width: 768px;
+    padding-top: 0;
+    width: 690px;
   }
 
   .cases__title {
@@ -391,18 +388,16 @@
     }
   }
 
-  .cases__img {
-    text-align: center;
+  .case__img-wrapper {
+    width: 690px;
+    height: 517px;
+    margin: 0;
+    margin-right: -100px;
+  }
 
+  .cases__widget-frame {
     &--before {
-      width: 677px;
-      height: 499px;
-    }
-
-    &--after {
-      display: none;
-      width: 545px;
-      height: 517px;
+      background-image: linear-gradient(to top, $lightgray 322px, $white 322px);
     }
   }
 }
