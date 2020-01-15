@@ -5,15 +5,8 @@
   //padding: 15px $mobile-margins 30px;
 }
 
-.cases__item {
-  padding: 10px $mobile-margins 10px;
-  //display: flex;
-  //flex-direction: column;
-}
-
 .cases__info {
-  //display: flex;
-  //flex-direction: column;
+  padding: 10px $mobile-margins 10px;
 }
 
 .cases__title {
@@ -136,33 +129,97 @@
   }
 }
 
+.cases__widget {
+  margin: 0;
+  margin-top: 33px;
+
+  min-height: 330px;
+}
+
+.case__img-wrapper {
+  position: relative;
+  width: 320px;
+  height: 240px;
+}
+
+.cases__img {
+  max-width: none;
+  width: 320px;
+  height: 240px;
+}
+
+.cases__widget-frame {
+  position: absolute;
+
+  width: 320px;
+  height: 240px;
+  overflow: hidden;
+
+  &--before {
+    z-index: 2;
+    background-color: $lightgray;
+    width: 100%;
+  }
+
+  &--after {
+    z-index: 1;
+  }
+}
+
+.cases__toggle {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 210px;
+
+  margin: 0 auto;
+  margin-top: 23px;
+  margin-bottom: 38px;
+  border: none;
+}
+
 .cases__toggle-button {
   color: $verydarkgray;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+  border: none;
+  box-shadow: none;
+  background-color: inherit;
 }
 
-.cases__widget {
+.cases__toggle_range {
   position: relative;
-  margin: 0;
-  margin-top: 33px;
+
+  width: 84px;
+  height: 14px;
+  background-color: $white;
+  border-radius: 6px;
+  border: 1px solid $lightgray6;
 }
 
-.cases__img {
-  display: block;
-  height: 232px;
-}
+.cases__toggle-indicator {
+  position: absolute;
 
-.cases__img--after {
-  display: none;
-}
+  top: 50%;
+  transform: translateY(-50%);
 
-.cases__toggle {
-  display: flex;
+  width: 35px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: $green;
 
-  margin-top: 35px;
+  &--before,
+  &--middle {
+    left: 6px;
+  }
+
+  &--after {
+    right: 6px;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -172,7 +229,7 @@
     background-image: linear-gradient(to top, $lightgray 462px, transparent 462px);
   }
 
-  .cases__item {
+  .cases__info {
     padding: 15px $tablet-margins 10px;
   }
 
@@ -190,7 +247,7 @@
   }
 
   .cases__result-list {
-    margin-top: 54px;
+    margin-top: 52px;
   }
 
   .cases__result-item {
@@ -250,13 +307,74 @@
   }
 
   .cases__widget {
-    margin-top: 90px;
+    margin-top: 75px;
+  }
+
+  .case__img-wrapper {
+    width: 690px;
+    height: 517px;
+    margin: 0 auto;
   }
 
   .cases__img {
-    height: 499px;
-    width: 100%;
-    text-align: center;
+    width: 690px;
+    height: 517px;
+  }
+
+  .cases__widget-frame {
+    width: 690px;
+    height: 517px;
+
+    &--before {
+      z-index: 2;
+      background-image: linear-gradient(to top, $lightgray 346px, $white 346px);
+      width: 50%;
+    }
+
+    &--after {
+      z-index: 1;
+    }
+  }
+
+  .cases__toggle {
+    width: 582px;
+    margin-top: 20px;
+  }
+
+  .cases__toggle-button {
+    font-size: 20px;
+  }
+
+  .cases__toggle_range {
+    width: 430px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: $lightgray6;
+  }
+
+  .cases__toggle-indicator {
+    width: 34px;
+    height: 34px;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    border: 1px solid $lightgray6;
+    background-color: $white;
+    border-radius: 17px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 13px;
+      top: 13px;
+      width: 8px;
+      height: 8px;
+      border-radius: 4px;
+      background-color: $green;
+    }
+
+    &--middle {
+      left: calc(50% - 16px);
+    }
   }
 }
 
@@ -264,12 +382,12 @@
   .cases {
     padding: 0;
     padding-top: 10px;
-    padding-bottom: 55px;
+    padding-bottom: 75px;
   }
 
   .cases__item {
     padding-left: $desktop-margins;
-    padding-right: $desktop-margins;
+    padding-right: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -278,13 +396,13 @@
 
   .cases__info {
     @include clear-margin-padding;
-    padding-top: 45px;
+    padding-top: 59px;
   }
 
   .cases__widget {
     @include clear-margin-padding;
-    padding-top: 20px;
-    width: 768px;
+    padding-top: 0;
+    width: 690px;
   }
 
   .cases__title {
@@ -351,8 +469,22 @@
     }
   }
 
-  .cases__img {
-    width: 768px;
-    text-align: center;
+  .case__img-wrapper {
+    width: 690px;
+    height: 517px;
+    margin: 0;
+    margin-right: -100px;
+  }
+
+  .cases__widget-frame {
+    &--before {
+      background-image: linear-gradient(to top, $lightgray 322px, $white 322px);
+    }
+  }
+
+  .cases__toggle {
+    margin-top: 45px;
+    margin-right: 35px;
+    width: 580px;
   }
 }

@@ -1,10 +1,26 @@
 .promo {
+  position: relative;
+
   padding-top: 190px;
   width: 280px;
   min-height: 289px;
 
   background-color: $green;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55px;
+    height: 60px;
+
+    top: 65px;
+    background-image: url("../img/icon-gift.svg");
+    background-size: 55px 60px;
+  }
 }
 
 .promo__description {
@@ -30,6 +46,11 @@
     min-height: 200px;
     width: 708px;
     padding: 72px 125px 69px 425px;
+
+    &::before {
+      left: 119px;
+      top: 65px;
+    }
   }
 
   .promo__description {
@@ -42,6 +63,15 @@
     width: 245px;
     min-height: 289px;
     padding: 190px 43px 43px;
+
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 65px;
+    }
   }
 
+  .promo__description {
+    text-align: center;
+  }
 }

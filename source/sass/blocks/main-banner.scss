@@ -1,7 +1,5 @@
 .main-banner {
   padding: 28px $mobile-margins 0;
-  //display: flex;
-  //flex-direction: column;
 
   background-image:
     url("../img/index-background-mobile@1x.jpg"),
@@ -41,6 +39,8 @@
   display: block;
   margin-top: 28px;
   text-align: center;
+  width: 280px;
+  height: 270px;
 }
 
 .main-banner__button {
@@ -89,7 +89,7 @@
     position: absolute;
     left: 50%;
     top: 230px;
-    width: auto;
+    width: 709px;
     height: 609px;
     transform: translateX(-45%);
     z-index: -1;
@@ -128,10 +128,11 @@
 
   .main-banner__img {
     z-index: 1;
-    top: 5px;
-    left: 50%;
-    width: auto;
+    top: 0;
+    width: 552px;
     height: 499px;
-    transform: translateX(-130px);
+
+    left: 50%;
+    transform: translateX(-160px);
   }
 }

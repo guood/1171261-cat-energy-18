@@ -13,20 +13,36 @@
       <nav class="page-header__main-nav main-nav">
         <div class="main-nav__logo-wrapper">
           <a class="main-nav__logo logo" aria-label="Логотип кэт энержи.">
-            <img src="img/logo-mobile.svg" alt="Логотип магазина кэт энержи" class="logo__img" width="191" height="38">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img src="img/logo-mobile.svg" alt="Логотип магазина кэт энержи" class="logo__img" width="191" height="38">
+            </picture>
           </a>
           <button class="main-nav__toggle" aria-label="Открыть меню"></button>
         </div>
         <ul class="main-nav__site-list site-list">
-          <li class="site-list__item site-list__item--active"><a class="site-list__item-link">Главная</a></li>
-          <li class="site-list__item"><a href="catalog.html" class="site-list__item-link">Каталог продукции</a></li>
-          <li class="site-list__item"><a href="form.html" class="site-list__item-link">Подбор программы</a></li>
+          <li class="site-list__item">
+            <a class="site-list__item-link site-list__item-link--index-page site-list__item-link--active">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="catalog.html" class="site-list__item-link site-list__item-link--index-page">Каталог продукции</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html" class="site-list__item-link site-list__item-link--index-page">Подбор программы</a>
+          </li>
         </ul>
       </nav>
       <section class="page-header__main-banner main-banner">
         <h2 class="main-banner__title">Функциональное питание для котов</h2>
         <p class="main-banner__description">Занялся собой? Займись котом</p>
-        <img src="img/index-can-mobile@1x.png" width="280" height="270" alt="Кэт энержи курица 500 грамм" class="main-banner__img">
+        <a>
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png">
+          <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
+          <img src="img/index-can-mobile@1x.png" width="280" height="270" alt="Кэт энержи курица 500 грамм" class="main-banner__img">
+        </picture>
+        </a>
         <a href="form.html" class="button button--green main-banner__button">Подобрать программу</a>
       </section>
     </header>
@@ -44,7 +60,7 @@
             </p>
             <a href="catalog-slim.html" class="aims__aim-link">Каталог slim</a>
           </li>
-          <li class="aims__aim-item aims__aim--gain-weight">
+          <li class="aims__aim-item aims__aim-item--gain-weight">
             <b class="aims__aim-title">Набор массы</b>
             <p class="aims__description">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat
@@ -99,11 +115,27 @@
             </dl>
           </div>
           <div class="cases__widget">
-            <img src="img/before-mobile@1x.png" width="251" height="240" alt="Фотография кота до программы" class="cases__img cases__img--before">
-<!--            <img src="img/after-mobile@1x.png" width="251" height="240" alt="Фотография кота после программы" class="cases__img cases__img&#45;&#45;after">-->
+            <div class="case__img-wrapper">
+              <div class="cases__widget-frame cases__widget-frame--before">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
+                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+                  <img src="img/before-mobile@1x.png" width="320" height="240" alt="Фотография кота до программы" class="cases__img">
+                </picture>
+              </div>
+              <div class="cases__widget-frame cases__widget-frame--after">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png">
+                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
+                  <img src="img/after-mobile@1x.png" width="320" height="240" alt="Фотография кота после программы" class="cases__img">
+                </picture>
+              </div>
+            </div>
             <div class="cases__toggle">
               <button class="cases__toggle-button">Было</button>
-              <span class="cases__toggle-indicator"></span>
+              <div class="cases__toggle_range">
+                <span class="cases__toggle-indicator cases__toggle-indicator--middle"></span>
+              </div>
               <button class="cases__toggle-button">Стало</button>
             </div>
           </div>
@@ -127,7 +159,8 @@
           </div>
         </div>
         <article class="contacts__map contacts-map">
-          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afa7a238db43c079296dfb3e334d04075b16c3cf4c3f3c53a03a6ee13e4d4220e&amp;lang=ru_RU&amp;scroll=true"></script>
+          <h2 class="visually-hidden">Карта с расположением офиса</h2>
+          <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afa7a238db43c079296dfb3e334d04075b16c3cf4c3f3c53a03a6ee13e4d4220e&amp;lang=ru_RU&amp;scroll=true"></script>
         </article>
         <!--img src="img/bg-map-mobile@1x.png" alt="Офис магазина кэт энержи на карте" class="contacts__map"-->
       </section>
