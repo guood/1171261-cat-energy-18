@@ -26,8 +26,6 @@
 
 .contacts__address {
   @include clear-margin-padding;
-  //display: flex;
-  //flex-direction: column;
 
   color: $gray;
   font-family: $font-family-secondary;
@@ -45,7 +43,7 @@
 @media (min-width: $tablet-width) {
   .contacts__info-content {
     width: $tablet-width;
-    padding: 60px 72px 62px;
+    padding: 8px 72px 62px;
   }
 
   .contacts__dealer-invitation {
