@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Document</title>
+  <style>
+    .container {
+      margin: 0 auto;
+    }
+
+    .cases__widget {
+      position: relative;
+      width: 320px;
+      height: 240px;
+      padding-bottom: 20px;
+    }
+
+    .cases__img {
+      width: 320px;
+      height: 240px;
+    }
+
+    .cases__img-wrapper {
+      position: relative;
+      display: flex;
+    }
+
+    .cases__img-wrapper::before {
+      content: "";
+
+      position: absolute;
+      z-index: -100;
+      bottom: -100px;
+      height: 240px;
+      width: 50vw;
+      left: calc(50% - 50vw);
+      background-color: #eee;
+    }
+
+    .cases__img-wrapper::after {
+      content: "";
+
+      position: absolute;
+      z-index: -100;
+      bottom: -100px;
+      height: 240px;
+      width: 49vw;
+      left: 50%;
+      background-color: #aaa;
+    }
+
+    .cases__widget-frame {
+      position: relative;
+      overflow: hidden;
+      height: 240px;
+      width: 50%;
+    }
+
+    .cases__toggle {
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      bottom: 50px;
+      width: 80%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .cases__toggle-range {
+      position: relative;
+      flex-grow: 1;
+      height: 8px;
+      border-radius: 3px;
+      border: 2px solid #444444;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .cases__toggle-indicator {
+      position: absolute;
+      width: 10px;
+      height: 4px;
+      background-color: #68b738;
+      border-radius: 2px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .cases__widget--show-before .cases__toggle-indicator {
+      left: 5px;
+    }
+
+    .cases__widget--show-before .cases__widget-frame--before {
+      width: 100%;
+    }
+
+    .cases__widget--show-before .cases__widget-frame--after {
+      width: 0;
+    }
+
+    .cases__widget--show-before .cases__img-wrapper::before {
+      width: 100vw;
+    }
+
+    .cases__widget--show-before .cases__img-wrapper::after {
+      display: none;
+    }
+
+    .cases__widget--show-after .cases__toggle-indicator {
+      right: 5px;
+    }
+
+    .cases__widget--show-after .cases__widget-frame--before {
+      display: none;
+    }
+
+    .cases__widget--show-after .cases__widget-frame--after {
+      width: 100%;
+    }
+
+    .cases__widget--show-after .cases__img-wrapper::before {
+      display: none;
+    }
+
+    .cases__widget--show-after .cases__img-wrapper::after {
+      left: calc(50% - 50vw);
+      width: 100vw;
+    }
+
+    .cases__widget--show-middle .cases__toggle-indicator {
+      left: calc(50% - 5px);
+    }
+
+    .cases__widget--show-middle .cases__widget-frame--before {
+      width: 50%;
+    }
+
+    .cases__widget--show-middle .cases__widget-frame--after {
+      width: 50%;
+    }
+
+    .cases__widget--show-middle .cases__img-after {
+      margin-left: -100%;
+    }
+
+    .cases__toggle-button {
+      color: black;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      text-transform: uppercase;
+      border: none;
+      box-shadow: none;
+      background-color: inherit;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="container cases__widget cases__widget--show-before">
+    <div class="cases__img-wrapper">
+      <div class="cases__widget-frame cases__widget-frame--before">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
+          <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+          <img src="img/before-mobile@1x.png" width="320" height="240" alt="Фотография кота до программы" class="cases__img cases__img-before">
+        </picture>
+      </div>
+      <div class="cases__widget-frame cases__widget-frame--after">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png">
+          <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
+          <img src="img/after-mobile@1x.png" width="320" height="240" alt="Фотография кота после программы" class="cases__img cases__img-after">
+        </picture>
+      </div>
+    </div>
+    <div class="cases__toggle">
+      <button class="cases__toggle-button">Было</button>
+      <div class="cases__toggle-range">
+        <span class="cases__toggle-indicator"></span>
+      </div>
+      <button class="cases__toggle-button">Стало</button>
+    </div>
+  </div>
+</body>
+</html>
