@@ -22,6 +22,14 @@
   padding-top: 23px;
   padding-bottom: 22px;
   text-align: center;
+
+  &:hover:not(.site-list__item-link--active) {
+    opacity: 0.6;
+  }
+
+  &:active:not(.site-list__item-link--active) {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {

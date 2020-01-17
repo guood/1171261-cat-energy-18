@@ -43,11 +43,11 @@
           <ul class="choice-program-form__cat-data-fields">
             <li class="choice-program-form__field choice-program-form__field--text">
               <label for="name" class="choice-program-form__label">Имя:*</label>
-              <input id="name" name="name" type="text" class="choice-program-form__text" placeholder="Барсик" required>
+              <input id="name" name="name" type="text" class="choice-program-form__control choice-program-form__text" placeholder="Барсик" required>
             </li>
             <li class="choice-program-form__field choice-program-form__field--text">
               <label for="weight" class="choice-program-form__label">Вес (кг):*</label>
-              <input id="weight" name="weight" type="text" class="choice-program-form__text" placeholder="7" required>
+              <input id="weight" name="weight" type="text" class="choice-program-form__text choice-program-form__text--error" placeholder="7" required>
             </li>
             <li class="choice-program-form__field choice-program-form__field--text">
               <label for="age" class="choice-program-form__label">Возраст (лет):</label>
@@ -56,15 +56,15 @@
           </ul>
           <ul class="choice-program-form__choice-aim">
             <li class="choice-program-form__field choice-program-form__field--radio">
-              <input type="radio" id="aimLoseWeight" name="aim" class="choice-program-form__radio" value="lose weight" checked>
+              <input type="radio" id="aimLoseWeight" name="aim" class="visually-hidden choice-program-form__radio" value="lose weight" checked>
               <label for="aimLoseWeight" class="choice-program-form__label">Похудение</label>
             </li>
             <li class="choice-program-form__field choice-program-form__field--radio">
-              <input type="radio" id="aimGainWeight" name="aim" class="choice-program-form__radio" value="gain weight">
+              <input type="radio" id="aimGainWeight" name="aim" class="visually-hidden choice-program-form__radio" value="gain weight">
               <label for="aimGainWeight" class="choice-program-form__label">Набор массы</label>
             </li>
             <li class="choice-program-form__field choice-program-form__field--radio">
-              <input type="radio" id="aimDontKnow" name="aim" class="choice-program-form__radio" value="i dont know">
+              <input type="radio" id="aimDontKnow" name="aim" class="visually-hidden choice-program-form__radio" value="i dont know">
               <label for="aimDontKnow" class="choice-program-form__label">Не знаю (нужен ваш совет)</label>
             </li>
           </ul>
