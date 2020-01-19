@@ -11,10 +11,25 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__logo-img {
   display: block;
+  fill: $gray2;
+  width: 27px;
+  height: 34px;
+
+  &:hover {
+    fill: #68b738;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
