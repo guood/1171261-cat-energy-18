@@ -7,6 +7,9 @@ $gray: #444444;
 $gray-active: rgba(68, 68, 68, 0.3);
 $white: #ffffff;
 $white-opacity03: rgba(255, 255, 255, 0.3);
+$toggle-shadow-color: rgba(0, 0, 0, 0.15);
+$toggle-shadow-hover-color: rgba(0, 0, 0, 0.25);
+$toggle-shadow-active-color: rgba(0, 0, 0, 0.3);
 $lightgray: #f2f2f2;
 $lightgray-hover: #ebebeb;
 /* TODO придумать нормальное название */
@@ -18,10 +21,12 @@ $lightgray6: #cdcdcd;
 $lightgray6-opacity05: rgba(205, 205, 205, 0.5);
 $lightgray7: #e6e6e6;
 $lightgray8: #eaeaea;
+$lightgray9: #bababa;
 $green: #68b738;
 $green-hover: #5eaa2f;
 $red: #ff8282;
 
+$retina-dppx: 1.5dppx;
 
 $mobile-width: 320px;
 $tablet-width: 768px;

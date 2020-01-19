@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/style.css">
-<!--    <link rel="stylesheet" href="css/form-dev.css">-->
+    <link rel="stylesheet" href="css/form-dev.css">
   </head>
   <body>
     <header class="page-header container">
-      <nav class="page-header__main-nav main-nav">
+      <nav class="page-header__main-nav main-nav main-nav--nojs main-nav--opened">
         <div class="main-nav__logo-wrapper">
           <a href="index.html" class="main-nav__logo logo" aria-label="Логотип кэт энержи.">
             <picture>
@@ -38,9 +38,9 @@
       <h1 class="page-main__title">Подбор программы</h1>
       <section class="page-main__choice-program-form choice-program-form">
         <h2 class="visually-hidden">Форма подбора программы</h2>
-        <p class="choice-program-form__description">Заполните анкету и мы подберем<br>программу питания для вашего кота</p>
+        <p class="standard-margings choice-program-form__description">Заполните анкету и мы подберем<br>программу питания для вашего кота</p>
         <form action="https://echo.htmlacademy.ru" class="choice-program-form__form" method="post">
-          <ul class="choice-program-form__cat-data-fields">
+          <ul class="standard-margings choice-program-form__cat-data-fields">
             <li class="choice-program-form__field choice-program-form__field--text">
               <label for="name" class="choice-program-form__label">Имя:*</label>
               <input id="name" name="name" type="text" class="choice-program-form__control choice-program-form__text" placeholder="Барсик" required>
@@ -68,7 +68,7 @@
               <label for="aimDontKnow" class="choice-program-form__label">Не знаю (нужен ваш совет)</label>
             </li>
           </ul>
-          <fieldset class="choice-program-form__fieldset choice-program-form__owner-data-fieldset">
+          <fieldset class="choice-program-form__fieldset choice-program-form__owner-data-fieldset standard-margings">
             <div class="choice-program-form__legend section-title">
               <span class="section-title__text">Контактные данные (владельца кота)</span>
             </div>
@@ -83,33 +83,37 @@
               </li>
             </ul>
           </fieldset>
-          <div class="choice-program-form__comments-fieldset">
-            <label for="comments" class="choice-program-form__legend">Комментарий</label>
+          <div class="choice-program-form__comments-fieldset standard-margings">
+            <div class="choice-program-form__legend section-title">
+              <label for="comments" class="section-title__text">Комментарий</label>
+            </div>
             <textarea name="comments" id="comments" class="choice-program-form__comments" cols="20" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
-          <fieldset class="choice-program-form__additional-fieldset">
-            <div class="choice-program-form__legend">Дополнительно</div>
+          <fieldset class="choice-program-form__additional-fieldset standard-margings">
+            <div class="choice-program-form__legend section-title">
+              <span class="section-title__text">Дополнительно</span>
+            </div>
             <ul class="choice-program-form__field-additional">
               <li class="choice-program-form__field choice-program-form__field--check choice-program-form__field-additional-item">
-                <input type="checkbox" class="choice-program-form__checkbox" id="additionalProductsSweetener" name="additional-products--sweetener" checked>
+                <input type="checkbox" class="visually-hidden choice-program-form__checkbox" id="additionalProductsSweetener" name="additional-products--sweetener" checked>
                 <label for="additionalProductsSweetener" class="choice-program-form__label">Сахарозаменитель</label>
               </li>
               <li class="choice-program-form__field choice-program-form__field--check choice-program-form__field-additional-item">
-                <input type="checkbox" class="choice-program-form__checkbox" id="additionalProductsWater" name="additional-products--water">
+                <input type="checkbox" class="visually-hidden choice-program-form__checkbox" id="additionalProductsWater" name="additional-products--water">
                 <label for="additionalProductsWater" class="choice-program-form__label">Питьевая вода</label>
               </li>
               <li class="choice-program-form__field choice-program-form__field--check choice-program-form__field-additional-item">
-                <input type="checkbox" class="choice-program-form__checkbox" id="additionalProductsMilk" name="additional-products--milk">
+                <input type="checkbox" class="visually-hidden choice-program-form__checkbox" id="additionalProductsMilk" name="additional-products--milk">
                 <label for="additionalProductsMilk" class="choice-program-form__label">Молоко</label>
               </li>
               <li class="choice-program-form__field choice-program-form__field--check choice-program-form__field-additional-item">
-                <input type="checkbox" class="choice-program-form__checkbox" id="additionalProductsVitamins" name="additional-products--vitamins">
+                <input type="checkbox" class="visually-hidden choice-program-form__checkbox" id="additionalProductsVitamins" name="additional-products--vitamins">
                 <label for="additionalProductsVitamins" class="choice-program-form__label">Витамины</label>
               </li>
             </ul>
           </fieldset>
-          <button type="submit" class="button button--green choice-program-form__submit-button">Отправить заявку</button>
-          <p class="choice-program-form__note">* - обязательные поля</p>
+          <button type="submit" class="standard-margings button button--green choice-program-form__submit-button">Отправить заявку</button>
+          <p class="choice-program-form__note">* - Обязательные поля</p>
         </form>
       </section>
     </main>

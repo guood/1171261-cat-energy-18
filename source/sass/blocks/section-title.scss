@@ -2,22 +2,22 @@
   position: relative;
 
   @include clear-margin-padding;
-  padding-bottom: 34px;
 
   color: $verydarkgray;
   font-size: 24px;
   font-weight: 400;
-  line-height: 24px;
-
-  border-bottom: 1px solid $lightgray2;
+  line-height: 25px;
 
   &::after {
     content: "";
     position: absolute;
-    z-index: -1;
+    z-index: -2;
 
-    left: 50%;
-    right: calc(50% - 50vw);
+    left: 0; //calc(50% - 20px);
+    right: calc(50% + 20px);
+
+    //margin-left: -50vw;
+    margin-right: -50vw;
 
     border-top: 3px solid $green;
     top: 15px;
@@ -25,24 +25,45 @@
 }
 
 .section-title__text {
+  position: relative;
   padding-right: 24px;
-  background-color: $white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    padding-left: 1px;
+    padding-right: 1px;
+
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $white;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .section-title {
-    padding-bottom: 80px;
-
     font-size: 36px;
     line-height: 36px;
     color: $darkgray;
-
-    border-bottom: 1px solid $lightgray3;
+    margin-left: -35px;
 
     &::after {
-      left: calc(50% - 49vw);
-      right: calc(50% - 49vw);
-      top: 23px;
+      content: "";
+      position: absolute;
+      z-index: -2;
+
+      left: calc(50% - 20px);
+      right: calc(50% + 10px);
+
+      margin-left: -50vw;
+      margin-right: -50vw;
+
+      border-top: 3px solid $green;
+      top: 20px;
     }
   }
 

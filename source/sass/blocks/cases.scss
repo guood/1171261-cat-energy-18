@@ -460,20 +460,35 @@
     width: 34px;
     height: 34px;
 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 5px $toggle-shadow-color;
     border: 1px solid $lightgray6;
     background-color: $white;
     border-radius: 17px;
 
+    cursor: pointer;
+
     &::before {
       content: "";
       position: absolute;
-      left: 13px;
-      top: 13px;
+      left: 12px;
+      top: 12px;
       width: 8px;
       height: 8px;
       border-radius: 4px;
       background-color: $green;
+    }
+
+    &:hover {
+      box-shadow: 0 3px 5px 0 $toggle-shadow-hover-color;
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+      box-shadow:
+        0 0 0 1px $green,
+        0 5px 6px 0 $toggle-shadow-active-color;
+      border: 1px solid $green;
     }
   }
 

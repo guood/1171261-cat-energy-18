@@ -1,5 +1,5 @@
 .page-header__main-nav {
-  padding: 11px 0 0;
+  //padding: 11px 0 0;
 }
 
 @media (min-width: $tablet-width) {
@@ -14,11 +14,20 @@
   }
 
   .page-header {
-    background-image:
-      url("../img/index-background-desktop@1x.jpg"),
-      linear-gradient(to right, transparent 50%, $green 50%);
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-size: 720px 696px;
+    &--index-page {
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-size: 720px 696px;
+      background-image:
+        url("../img/index-background-desktop@1x.jpg"),
+        linear-gradient(to right, transparent 0, $green 0);
+
+      @media (min-resolution: $retina-dppx) {
+        background-image:
+          url("../img/index-background-desktop@2x.jpg"),
+          linear-gradient(to right, transparent 0, $green 0);
+      }
+
+    }
   }
 }

@@ -1,11 +1,37 @@
 .contacts-map {
   height: 360px;
   width: 100%;
+
+  background-repeat: no-repeat;
+  background-size: 55px 53px, auto 360px;
+  background-position: 50% 155px, center 0;
+
+  background-image:
+    url("../img/map-pin.png"),
+    url(../img/bg-map-mobile@1x.png);
+
+  @media (min-resolution: $retina-dppx) {
+    background-image:
+      url("../img/map-pin.png"),
+      url(../img/bg-map-mobile@2x.png);
+  }
 }
 
 @media (min-width: $tablet-width) {
   .contacts-map {
     height: 395px;
+
+    background-size: 55px 53px, auto 395px;
+    background-position: calc(50% + 10px) 195px, center 0;
+    background-image:
+      url("../img/map-pin.png"),
+      url(../img/bg-map-tablet@1x.png);
+
+    @media (min-resolution: $retina-dppx) {
+      background-image:
+        url("../img/map-pin.png"),
+        url(../img/bg-map-tablet@2x.png);
+    }
   }
 }
 
@@ -13,5 +39,17 @@
   .contacts-map {
     position: relative;
     height: 400px;
+
+    background-size: 55px 53px, auto 400px;
+    background-position: calc(50% + 340px) 200px, center 0;
+    background-image:
+      url("../img/map-pin.png"),
+      url(../img/bg-map-desktop@1x.png);
+
+    @media (min-resolution: $retina-dppx) {
+      background-image:
+        url("../img/map-pin.png"),
+        url(../img/bg-map-desktop@2x.png);
+    }
   }
 }
