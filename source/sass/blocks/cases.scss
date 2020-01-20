@@ -254,7 +254,7 @@
 @media (min-width: $tablet-width) {
   .cases {
     position: relative;
-    padding: 30px $tablet-margins 57px;
+    padding: 30px $tablet-margins 0;
     background-color: inherit;
   }
 
@@ -419,7 +419,7 @@
       width: 99vw;
       left: calc(50% - 50vw);
       z-index: -100;
-      bottom: 58px;
+      bottom: 5px;
       height: 462px;
     }
   }
