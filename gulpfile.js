@@ -15,10 +15,10 @@ var server = require("browser-sync").create();
 gulp.task("css", function () {
   /* временно добавлены стили, которые задают нужные фоновые изображения для верстки страниц
   *  TODO в финальной версии останется только style.scss*/
-  return gulp.src(["source/sass/style.scss",
+  return gulp.src(["source/sass/style.scss"/*,
                     "source/sass/dev/index-dev.scss",
                     "source/sass/dev/catalog-dev.scss",
-                    "source/sass/dev/form-dev.scss"
+                    "source/sass/dev/form-dev.scss"*/
                   ])
     .pipe(plumber())
     .pipe(sourcemap.init())
@@ -57,6 +57,11 @@ gulp.task("copyImg", function () {
     .pipe(gulp.dest(buildPath + "/img"))
 });
 
+gulp.task("copyJs", function () {
+  return gulp.src("source/js/**js")
+    .pipe(gulp.dest(buildPath + "/js"))
+});
+
 gulp.task("server", function () {
   server.init({
     server: "source/",
@@ -72,4 +77,4 @@ gulp.task("server", function () {
 
 gulp.task("start", gulp.series("css", "server"));
 
-gulp.task("buildAll", gulp.parallel(gulp.series("css", "copyCssToBuild"), "copyHtml", "copyFonts", "copyImg"));
+gulp.task("buildAll", gulp.parallel(gulp.series("css", "copyCssToBuild"), "copyHtml", "copyFonts", "copyImg", "copyJs"));
