@@ -3,8 +3,6 @@
   margin-top: 17px;
   padding: 0 $mobile-margins 0;
 
-  border-bottom: 1px solid $lightgray3;
-
   color: $verydarkgray;
   font-size: 36px;
   font-weight: 400;
@@ -32,7 +30,7 @@
 }
 
 .page-main__choice-program-form {
-  margin: 18px $mobile-margins 30px;
+  margin: 18px 0 30px;
 }
 
 @media (min-width: $tablet-width) {
@@ -69,7 +67,7 @@
   }
 
   .page-main__choice-program-form {
-    margin: 50px 67px 70px 71px;
+    margin: 50px 67px 72px 71px;
   }
 }
 
@@ -78,8 +76,6 @@
     margin: 17px $desktop-margins 0;
     padding-left: 0;
     padding-right: 0;
-
-    border-bottom: 1px solid $lightgray3;
   }
 
   .page-main__aims {
@@ -106,6 +102,6 @@
   }
 
   .page-main__choice-program-form {
-    margin: 50px $desktop-margins 80px;
+    margin: 50px $desktop-margins 85px;
   }
 }
