@@ -134,10 +134,10 @@
 }
 
 .cases__widget {
-  position: relative;
   margin-top: 23px;
   width: 320px;
-  padding-bottom: 85px;
+  padding-bottom: 33px;
+  text-align: center;
 
   &--show-before {
     & .cases__toggle-indicator {
@@ -197,7 +197,6 @@
 .cases__img-wrapper {
   width: 320px;
   height: 240px;
-  position: relative;
   display: flex;
 }
 
@@ -209,14 +208,14 @@
 }
 
 .cases__toggle {
-  position: absolute;
+  margin: 0 auto;
+  margin-top: 30px;
+  text-align: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
   bottom: 33px;
-  width: 214px;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 210px;
 }
 
 .cases__toggle-range {
@@ -249,10 +248,12 @@
   border: none;
   box-shadow: none;
   background-color: inherit;
+  cursor: pointer;
 }
 
 @media (min-width: $tablet-width) {
   .cases {
+    position: relative;
     padding: 30px $tablet-margins 57px;
     background-color: inherit;
   }
@@ -338,7 +339,7 @@
     margin: 0 auto;
     margin-top: 75px;
     width: 690px;
-    padding-bottom: 115px;
+    padding-bottom: 74px;
 
     &--show-before {
       & .cases__widget-frame {
@@ -353,11 +354,7 @@
 
       & .cases__img-wrapper {
         &::before {
-          width: 99vw;
-        }
-
-        &::after {
-          display: none;
+          background-image: linear-gradient(to right, $lightgray 100vw, $lightgray8 100vw);
         }
       }
     }
@@ -379,12 +376,7 @@
 
       & .cases__img-wrapper {
         &::before {
-          display: none;
-        }
-
-        &::after {
-          left: calc(50% - 50vw);
-          width: 99vw;
+          background-image: linear-gradient(to right, $lightgray 0, $lightgray8 0);
         }
       }
     }
@@ -419,25 +411,16 @@
     width: 690px;
     height: 517px;
 
-    &::before,
-    &::after {
+    &::before {
       content: "";
       position: absolute;
-      z-index: -100;
-      bottom: -115px;
-      height: 462px;
-    }
 
-    &::before {
-      width: 50vw;
+      background-image: linear-gradient(to right, $lightgray 50vw, $lightgray8 50vw);
+      width: 99vw;
       left: calc(50% - 50vw);
-      background-color: $lightgray;
-    }
-
-    &::after {
-      width: 50vw;
-      left: 50%;
-      background-color: $lightgray8;
+      z-index: -100;
+      bottom: 58px;
+      height: 462px;
     }
   }
 
@@ -447,6 +430,7 @@
   }
 
   .cases__toggle {
+    margin-top: 20px;
     bottom: 73px;
     width: 84%;
   }
@@ -497,7 +481,20 @@
   }
 
   .cases__toggle-button {
+    @include clear-margin-padding;
     font-size: 20px;
+
+    padding-bottom: 6px;
+    border-bottom: 1px dashed rgba(17, 17, 17, 0.23);
+
+    &:hover {
+      border-bottom: 1px solid rgba(17, 17, 17, 0.4);
+    }
+
+    &:active,
+    &:focus {
+      border-bottom: none;
+    }
   }
 }
 
@@ -506,12 +503,10 @@
     padding: 0;
     padding-top: 10px;
     padding-bottom: 75px;
-    background-image: linear-gradient(to top, $lightgray 462px, transparent 462px);
   }
 
   .cases__item {
     padding-left: $desktop-margins;
-    padding-right: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -521,14 +516,33 @@
   .cases__info {
     @include clear-margin-padding;
     padding-top: 59px;
+    width: 450px;
   }
 
   .cases__widget {
+    top: 15px;
+    left: 47vw;
+
     @include clear-margin-padding;
     padding-top: 0;
     margin-top: 5px;
-    padding-bottom: 135px;
     width: 690px;
+
+    &--show-after {
+      & .cases__img-wrapper {
+        &::before {
+          background-image: linear-gradient(to right, $lightgray 0, $lightgray8 0);
+        }
+      }
+    }
+
+    &--show-middle {
+      & .cases__img-wrapper {
+        &::before {
+          background-image: linear-gradient(to right, $lightgray calc(50vw + 300px), $lightgray8 calc(50vw + 300px));
+        }
+      }
+    }
   }
 
   .cases__title {
@@ -596,25 +610,13 @@
   }
 
   .cases__img-wrapper {
-    &::before,
-    &::after {
+    &::before {
       content: "";
       position: absolute;
       z-index: -100;
-      bottom: -115px;
+      bottom: 0;
       height: 462px;
-    }
-
-    &::before {
-      width: 50%;
-      left: 0;
-      background-color: $lightgray;
-    }
-
-    &::after {
-      width: 50vw;
-      left: 50%;
-      background-color: transparent;// $lightgray8;
+      width: 99vw;
     }
   }
 
@@ -624,8 +626,8 @@
   }
 
   .cases__toggle {
-    bottom: 73px;
-    width: 90%;
+    margin-top: 40px;
+    width: 583px;
   }
 
   .cases__toggle-range {

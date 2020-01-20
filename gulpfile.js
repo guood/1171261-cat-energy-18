@@ -1,5 +1,7 @@
 "use strict";
 
+const buildPath = "build";
+
 var gulp = require("gulp");
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
@@ -27,6 +29,30 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
+gulp.task("clean", function() {
+  return "";
+});
+
+gulp.task("copyCssToBuild", function () {
+  return gulp.src("source/css/*.css*")
+    .pipe(gulp.dest(buildPath + "/css"));
+});
+
+gulp.task("copyHtml", function () {
+  return gulp.src("source/*.html")
+    .pipe(gulp.dest(buildPath))
+});
+
+gulp.task("copyFonts", function () {
+  return gulp.src("source/fonts/*.woff*")
+    .pipe(gulp.dest(buildPath + "/fonts"))
+});
+
+gulp.task("copyImg", function () {
+  return gulp.src("source/img/**")
+    .pipe(gulp.dest(buildPath + "/img"))
+});
+
 gulp.task("server", function () {
   server.init({
     server: "source/",
@@ -41,3 +67,5 @@ gulp.task("server", function () {
 });
 
 gulp.task("start", gulp.series("css", "server"));
+
+gulp.task("buildAll", gulp.parallel(gulp.series("css", "copyCssToBuild"), "copyHtml", "copyFonts", "copyImg"));

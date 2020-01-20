@@ -13,13 +13,14 @@
     "gulp-sass": "4.0.x",
     "@htmlacademy/editorconfig-cli": "1.x",
     "stylelint": "10.1.x",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "stylelint-config-htmlacademy": "0.1.x",
+    "node-sass": "^4.13.0"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp css",
+    "build": "gulp buildAll",
     "start": "gulp start"
   },
   "browserslist": [
@@ -37,8 +38,5 @@
   ],
   "engines": {
     "node": "8.16"
-  },
-  "dependencies": {
-    "node-sass": "^4.13.0"
   }
 }

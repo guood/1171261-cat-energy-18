@@ -22,26 +22,19 @@
     border-top: 3px solid $green;
     top: 15px;
   }
+
+  &--owner .section-title__text {
+    width: 205px;
+  }
 }
 
 .section-title__text {
   position: relative;
+  display: inline-block;
+  vertical-align: top;
+  background-color: $white;
+
   padding-right: 24px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-
-    padding-left: 1px;
-    padding-right: 1px;
-
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $white;
-  }
 }
 
 @media (min-width: $tablet-width) {
@@ -64,6 +57,10 @@
 
       border-top: 3px solid $green;
       top: 20px;
+    }
+
+    &--owner .section-title__text {
+      width: auto;
     }
   }
 
