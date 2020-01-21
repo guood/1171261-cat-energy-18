@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* TODO придумать нормальное название */
+body {
+  background: url("../img/dev/cat-energy-catalog-mobile.psd.png") no-repeat 50% 0; }
+
+@media (min-width: 768px) {
+  body {
+    background: url("../img/dev/cat-energy-catalog-tablet.psd.png") no-repeat 50% 0; } }
+
+@media (min-width: 1300px) {
+  body {
+    background: url("../img/dev/cat-energy-catalog-desktop.psd.png") no-repeat 50% 0; } }
+
+/*# sourceMappingURL=catalog-dev.css.map */
