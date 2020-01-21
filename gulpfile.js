@@ -16,13 +16,7 @@ var del = require("del");
 var server = require("browser-sync").create();
 
 gulp.task("css", function () {
-  /* временно добавлены стили, которые задают нужные фоновые изображения для верстки страниц
-  *  TODO в финальной версии останется только style.scss*/
-  return gulp.src(["source/sass/style.scss"/*,
-                    "source/sass/dev/index-dev.scss",
-                    "source/sass/dev/catalog-dev.scss",
-                    "source/sass/dev/form-dev.scss"*/
-                  ])
+  return gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
@@ -47,16 +41,16 @@ gulp.task("html", function () {
 
 gulp.task("images", function () {
   return gulp.src("build/img/**/*.{png,jpg,svg}")
-     .pipe(imagemin([
-       imagemin.mozjpeg({progressive: true}),
-       imagemin.optipng({optimizationLevel: 3}),
-       imagemin.svgo({
-         plugins: [
-           {revoveViewBox: false},
-           {cleanupIDs: false}
-         ]
-       })
-     ]))
+    .pipe(imagemin([
+      imagemin.mozjpeg({progressive: true}),
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.svgo({
+        plugins: [
+          {removeViewBox: false},
+          {cleanupIDs: false}
+        ]
+      })
+    ]))
     .pipe(gulp.dest("build/img"))
 });
 
