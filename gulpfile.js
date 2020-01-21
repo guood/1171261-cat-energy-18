@@ -42,7 +42,6 @@ gulp.task("clean", function() {
 
 gulp.task("html", function () {
   return gulp.src("source/*.html*")
-    .pipe(posthtml())
     .pipe(gulp.dest("build"))
 });
 
