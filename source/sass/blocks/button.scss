@@ -14,11 +14,29 @@
 
   &--green {
     background-color: $green;
+
+    &:hover,
+    &:active {
+      background-color: $green-hover;
+    }
+
+    &:active {
+      color: $white-opacity03;
+    }
   }
 
   &--gray {
     color: $gray;
     background-color: $lightgray;
+
+    &:hover,
+    &:active {
+      background-color: $lightgray-hover;
+    }
+
+    &:active {
+      color: $gray-active;
+    }
   }
 }
 

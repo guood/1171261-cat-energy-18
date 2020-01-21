@@ -42,24 +42,40 @@
     background-repeat: no-repeat;
     background-color: $green;
 
-    background-position: 5px 5px, 0 0;
-    background-size: 50px 50px, 60px 60px;
+    background-position: 5px 5px;
+    background-size: 50px 50px;
   }
 
   &--healthy-food::before {
     background-image: url("../img/advantage-leaf@1x.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantage-leaf@2x.png");
+    }
   }
 
   &--powder::before {
     background-image: url("../img/advantage-powder@1x.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantage-powder@2x.png");
+    }
   }
 
   &--functional-nutrition::before {
     background-image: url("../img/advantage-dining@1x.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantage-dining@2x.png");
+    }
   }
 
   &--deadline::before {
     background-image: url("../img/advantage-clock@1x.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantage-clock@2x.png");
+    }
   }
 }
 
@@ -114,8 +130,7 @@
       width: 80px;
       height: 80px;
 
-      background-position: 15px 15px, 0 0;
-      background-size: 50px 50px, 80px 80px;
+      background-position: 15px 15px;
     }
 
     &::after {

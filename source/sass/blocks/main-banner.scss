@@ -1,12 +1,19 @@
 .main-banner {
   padding: 28px $mobile-margins 0;
 
-  background-image:
-    url("../img/index-background-mobile@1x.jpg"),
-    linear-gradient(to bottom, $green 305px, transparent 305px);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: $mobile-width 305px;
+
+  background-image:
+    url("../img/index-background-mobile@1x.jpg"),
+    linear-gradient(to bottom, $green 305px, transparent 305px);
+
+  @media (min-resolution: $retina-dppx) {
+    background-image:
+      url("../img/index-background-mobile@2x.jpg"),
+      linear-gradient(to bottom, $green 305px, transparent 305px);
+  }
 
   min-height: 480px;
 }
@@ -40,7 +47,7 @@
   margin-top: 28px;
   text-align: center;
   width: 280px;
-  height: 270px;
+  height: 271px;
 }
 
 .main-banner__button {
@@ -84,7 +91,6 @@
     color: $verydarkgray;
   }
 
-  /* TODO пока так. Как менять картинки в зависимости от устройства пока не знаю */
   .main-banner__img {
     position: absolute;
     left: 50%;
@@ -93,6 +99,11 @@
     height: 609px;
     transform: translateX(-45%);
     z-index: -1;
+
+    @media (min-resolution: $retina-dppx) {
+      width: 709px;
+      height: 609px;
+    }
   }
 
   .main-banner__button {
@@ -112,6 +123,7 @@
     padding-right: 50%;
 
     min-height: 583px;
+    background-size: 720px 696px;
   }
 
   .main-banner__title {

@@ -5,12 +5,12 @@
     <title>Кет энержи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/index-dev.css">
+    <link rel="stylesheet" href="css/style.min.css">
+<!--    <link rel="stylesheet" href="css/index-dev.css">-->
   </head>
   <body>
-    <header class="page-header container">
-      <nav class="page-header__main-nav main-nav">
+    <header class="page-header page-header--index-page container">
+      <nav class="page-header__main-nav main-nav main-nav--nojs main-nav--opened">
         <div class="main-nav__logo-wrapper">
           <a class="main-nav__logo logo" aria-label="Логотип кэт энержи.">
             <picture>
@@ -38,9 +38,9 @@
         <p class="main-banner__description">Занялся собой? Займись котом</p>
         <a>
         <picture>
-          <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png">
-          <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
-          <img src="img/index-can-mobile@1x.png" width="280" height="270" alt="Кэт энержи курица 500 грамм" class="main-banner__img">
+          <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png, img/index-can-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg, img/index-can-tablet@2x.jpg 2x">
+          <img src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="271" alt="Кэт энержи курица 500 грамм" class="main-banner__img">
         </picture>
         </a>
         <a href="form.html" class="button button--green main-banner__button">Подобрать программу</a>
@@ -114,27 +114,27 @@
               </div>
             </dl>
           </div>
-          <div class="cases__widget">
-            <div class="case__img-wrapper">
+          <div class="cases__widget cases__widget--show-middle">
+            <div class="cases__img-wrapper">
               <div class="cases__widget-frame cases__widget-frame--before">
                 <picture>
-                  <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
-                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
-                  <img src="img/before-mobile@1x.png" width="320" height="240" alt="Фотография кота до программы" class="cases__img">
+                  <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png, img/before-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png, img/before-tablet@2x.png 2x">
+                  <img src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="240" alt="Фотография кота до программы" class="cases__img cases__img-before">
                 </picture>
               </div>
               <div class="cases__widget-frame cases__widget-frame--after">
                 <picture>
-                  <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png">
-                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
-                  <img src="img/after-mobile@1x.png" width="320" height="240" alt="Фотография кота после программы" class="cases__img">
+                  <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png, img/after-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png, img/after-tablet@2x.png 2x">
+                  <img src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="320" height="240" alt="Фотография кота после программы" class="cases__img cases__img-after">
                 </picture>
               </div>
             </div>
             <div class="cases__toggle">
               <button class="cases__toggle-button">Было</button>
-              <div class="cases__toggle_range">
-                <span class="cases__toggle-indicator cases__toggle-indicator--middle"></span>
+              <div class="cases__toggle-range">
+                <span class="cases__toggle-indicator" tabindex="0"></span>
               </div>
               <button class="cases__toggle-button">Стало</button>
             </div>
@@ -162,7 +162,6 @@
           <h2 class="visually-hidden">Карта с расположением офиса</h2>
           <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afa7a238db43c079296dfb3e334d04075b16c3cf4c3f3c53a03a6ee13e4d4220e&amp;lang=ru_RU&amp;scroll=true"></script>
         </article>
-        <!--img src="img/bg-map-mobile@1x.png" alt="Офис магазина кэт энержи на карте" class="contacts__map"-->
       </section>
       <section class="page-footer__info footer-info">
         <h2 class="visually-hidden">Секция информация в подвале</h2>
@@ -172,23 +171,40 @@
           </a>
           <ul class="footer-info__social social">
             <li class="social__item">
-              <a href="" class="social__link social__link--vk" aria-label="Кэт энержи в вконтакте"></a>
+              <a href="" class="social__link" aria-label="Кэт энержи в вконтакте">
+                <svg width="22" height="12" class="social__icon social__icon--vk">
+                  <use xlink:href="img/sprite.svg#icon-vk"></use>
+                </svg>
+              </a>
             </li>
             <li class="social__item">
-              <a href="" class="social__link social__link--ins" aria-label="Кэт энержи в инстаграм"></a>
+              <a href="" class="social__link" aria-label="Кэт энержи в инстаграм">
+                <svg width="16" height="16" class="social__icon social__icon--inst">
+                  <use xlink:href="img/sprite.svg#icon-inst"></use>
+                </svg>
+              </a>
             </li>
             <li class="social__item">
-              <a href="" class="social__link social__link--fb" aria-label="Кэт энержи в фейсбук"></a>
+              <a href="" class="social__link" aria-label="Кэт энержи в фейсбук">
+                <svg width="10" height="19" class="social__icon social__icon--fb">
+                  <use xlink:href="img/sprite.svg#icon-fb"></use>
+                </svg>
+              </a>
             </li>
           </ul>
           <div class="footer-info__copyright copyright">
             <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">HTML Academy</a>
             <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__logo-link">
-              <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип htmlacademy" class="copyright__logo-img">
+              <svg class="copyright__logo-img" width="27" height="34" aria-label="Логотип HTML Academy">
+                <use xlink:href="img/sprite.svg#htmlacademy"></use>
+              </svg>
             </a>
           </div>
         </div>
       </section>
     </footer>
+    <script src="js/svg4everybody.min.js"></script>
+    <script src="js/picturefill.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

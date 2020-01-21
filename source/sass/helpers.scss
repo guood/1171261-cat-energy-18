@@ -2,7 +2,7 @@
   box-sizing: content-box;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden/*:not(:focus):not(:active)*/ {
   position: absolute;
 
   width: 1px;

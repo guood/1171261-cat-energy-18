@@ -78,7 +78,8 @@
 }
 
 .aims__aim-link {
-  display: block;
+  display: flex;
+  align-items: center;
   color: $verydarkgray;
   font-size: 16px;
   font-weight: 400;
@@ -87,6 +88,23 @@
   text-decoration: none;
 
   margin-top: 18px;
+
+  &::after {
+    content: "";
+    width: 33px;
+    height: 11px;
+    margin-left: 13px;
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:hover::after {
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -146,6 +164,10 @@
     line-height: 20px;
 
     margin-top: auto;
+
+    &::after {
+      margin-left: 22px;
+    }
   }
 }
 
