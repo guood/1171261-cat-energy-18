@@ -19,7 +19,9 @@
 
 @media (min-width: $tablet-width) {
   .contacts-map {
+    overflow: hidden;
     height: 395px;
+    width: 100%;
 
     background-size: 55px 53px, auto 395px;
     background-position: calc(50% + 10px) 195px, center 0;

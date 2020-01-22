@@ -49,6 +49,7 @@
   .contacts__dealer-invitation {
     font-size: 20px;
     line-height: 25px;
+    width: 160px;
   }
 
   .contacts__address {
@@ -73,7 +74,7 @@
 
     background-color: $white;
 
-    left: 110px;
+    left: calc(50% - 610px);
     top: 95px;
 
     width: 570px;
@@ -84,7 +85,7 @@
 
   .contacts__address {
     text-align: left;
-    margin-left: 95px;
+    margin-left: 90px;
     margin-top: -5px;
   }
 }

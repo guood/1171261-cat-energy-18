@@ -62,7 +62,7 @@
 
 @media (min-width: $tablet-width) {
   .additional-products {
-    padding: 10px $tablet-margins 40px;
+    padding: 10px $tablet-margins 45px;
   }
 
   .additional-products__list {
@@ -113,6 +113,10 @@
   .additional-products__promo {
     margin-top: 69px;
   }
+
+  .additional-products__title {
+    margin-left: 1px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -124,7 +128,7 @@
 
   .additional-products__list {
     padding-top: 0;
-    width: 900px;
+    width: 895px;
   }
 
   .additional-products {
@@ -166,9 +170,11 @@
     width: 60px;
   }
 
+  .additional-products__title {
+    margin-left: 0;
+  }
+
   .additional-products__button {
-    // отступ сверху и снизу задает высоту области.
-    // min-height для всей ячейки использвать не получилось - в ie11 не работает align-items
     margin: 16px 0 15px auto;
     width: 245px;
   }

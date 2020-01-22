@@ -1,15 +1,11 @@
 .page-footer {
   background-color: $lightgray;
+  overflow: hidden;
 }
 
 @media (min-width: $tablet-width) {
   .page-footer__info {
-    padding: 20px $tablet-margins;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .page-footer__info {
-    padding: 20px $desktop-margins;
+    margin: 0 auto;
+    padding: 20px 0;
   }
 }

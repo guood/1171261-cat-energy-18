@@ -23,6 +23,7 @@
 .cases__description {
   @include clear-margin-padding;
   margin-top: 23px;
+  width: 270px;
 
   color: $gray;
   font-family: $font-family-secondary;
@@ -139,7 +140,8 @@
   padding-bottom: 33px;
   text-align: center;
 
-  &--show-before {
+  &--show-before,
+  &--show-middle {
     & .cases__toggle-indicator {
       left: 5px;
     }
@@ -168,28 +170,6 @@
       &--after {
         width: 100%;
       }
-    }
-  }
-
-  &--show-middle {
-    & .cases__toggle-indicator {
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    & .cases__widget-frame {
-      &--before {
-        width: 160px;
-      }
-
-      &--after {
-        width: 160px;
-      }
-    }
-
-    & .cases__img-after {
-      margin-left: -100%;
     }
   }
 }
@@ -254,7 +234,8 @@
 @media (min-width: $tablet-width) {
   .cases {
     position: relative;
-    padding: 30px $tablet-margins 0;
+    overflow: hidden;
+    padding: 30px 0 0;
     background-color: inherit;
   }
 
@@ -312,6 +293,7 @@
       text-align: right;
 
       margin-top: 10px;
+      margin-right: 5px;
     }
   }
 
@@ -384,6 +366,7 @@
     &--show-middle {
       & .cases__toggle-indicator {
         left: 50%;
+        transform: translate(-50%, -50%);
       }
 
       & .cases__widget-frame {
@@ -432,7 +415,7 @@
   .cases__toggle {
     margin-top: 20px;
     bottom: 73px;
-    width: 84%;
+    width: 570px;
   }
 
   .cases__toggle-range {
@@ -502,7 +485,7 @@
   .cases {
     padding: 0;
     padding-top: 10px;
-    padding-bottom: 75px;
+    padding-bottom: 65px;
   }
 
   .cases__item {
@@ -520,9 +503,6 @@
   }
 
   .cases__widget {
-    top: 15px;
-    left: 47vw;
-
     @include clear-margin-padding;
     padding-top: 0;
     margin-top: 5px;
@@ -539,8 +519,27 @@
     &--show-middle {
       & .cases__img-wrapper {
         &::before {
-          background-image: linear-gradient(to right, $lightgray calc(50vw + 300px), $lightgray8 calc(50vw + 300px));
+          background-image: linear-gradient(to right, $lightgray calc(50vw + 325px), $lightgray8 calc(50vw + 325px));
         }
+      }
+
+      & .cases__toggle-indicator {
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      & .cases__widget-frame {
+        &--before {
+          width: 365px;
+        }
+
+        &--after {
+          width: 45%;
+        }
+      }
+
+      & .cases__img-after {
+        margin-left: -365px;
       }
     }
   }
@@ -556,7 +555,7 @@
 
   .cases__result-list {
     width: 366px;
-    margin-top: 70px;
+    margin-top: 67px;
   }
 
   .cases__result-item {
@@ -627,16 +626,18 @@
 
   .cases__toggle {
     margin-top: 40px;
-    width: 583px;
+    width: 570px;
+    justify-content: space-between;
+    transform: translateX(20px);
   }
 
   .cases__toggle-range {
     height: 6px;
     border-radius: 3px;
     background-color: $lightgray6;
-    flex-grow: 1;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: -5px;
   }
 
   .cases__toggle-indicator {

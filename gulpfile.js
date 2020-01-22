@@ -40,7 +40,7 @@ gulp.task("html", function () {
 });
 
 gulp.task("images", function () {
-  return gulp.src("build/img/**/*.{png,jpg,svg}")
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.mozjpeg({progressive: true}),
       imagemin.optipng({optimizationLevel: 3}),
@@ -63,7 +63,6 @@ gulp.task("webp", function () {
 gulp.task("copy", function () {
   return gulp.src([
       "source/fonts/**/*.{woff,woff2}",
-      "source/img/**",
       "source/js/**/*.js",
       "source/*.ico"
     ], {
