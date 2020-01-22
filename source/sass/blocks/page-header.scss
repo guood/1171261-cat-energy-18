@@ -1,3 +1,7 @@
+.page-header {
+  overflow: hidden;
+}
+
 @media (min-width: $tablet-width) {
   .page-header__main-nav {
     padding: 24px $tablet-margins 0;

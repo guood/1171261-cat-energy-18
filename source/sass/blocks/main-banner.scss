@@ -93,7 +93,7 @@
 
   .main-banner__img {
     position: absolute;
-    left: 50%;
+    left: calc(50% - 36px);
     top: 230px;
     width: 709px;
     height: 609px;

@@ -17,14 +17,16 @@
 }
 
 @media (min-width: $tablet-width) {
-  .logo {
+  .logo,
+  .logo__img {
     width: 173px;
     height: 58px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .logo {
+  .logo,
+  .logo__img {
     width: 202px;
     height: 59px;
   }
