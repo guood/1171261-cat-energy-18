@@ -1,7 +1,7 @@
 .logo {
   display: block;
   width: 191px;
-  height: 38px;
+  height: 40px;
 
   &:hover {
     opacity: 0.8;
@@ -13,11 +13,17 @@
 }
 
 .logo__img {
-  color: red;
+  width: 191px;
+  height: 38px;
 }
 
+
 @media (min-width: $tablet-width) {
-  .logo,
+  .logo {
+    width: 173px;
+    height: 60px;
+  }
+
   .logo__img {
     width: 173px;
     height: 58px;
@@ -25,7 +31,11 @@
 }
 
 @media (min-width: $desktop-width) {
-  .logo,
+  .logo {
+    width: 202px;
+    height: 61px;
+  }
+
   .logo__img {
     width: 202px;
     height: 59px;

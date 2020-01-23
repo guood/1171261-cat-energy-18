@@ -5,6 +5,8 @@
     <title>Каталог продукции</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -12,7 +14,7 @@
       <div class="page-header__wrapper container">
         <nav class="page-header__main-nav main-nav main-nav--nojs main-nav--opened">
           <div class="main-nav__logo-wrapper">
-            <a href="index.html" class="main-nav__logo logo" aria-label="Логотип кэт энержи.">
+            <a href="index.html" class="main-nav__logo logo" aria-label="Перейти на главную страницу сайта">
               <picture>
                 <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
                 <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -42,7 +44,7 @@
           <h2 class="visually-hidden">Список товаров</h2>
           <div class="catalog__product-list">
             <article class="catalog__product">
-              <a href="products/cat-energy-pro-500-kitchen.html" class="catalog__product-img-link">
+              <a href="products/cat-energy-pro-500-kitchen.html" class="catalog__product-img-link" aria-label="Открыть страницу товара CAT ENERGY PRO 500 курица" tabindex="-1">
                 <picture>
                   <source type="image/webp" media="(min-width: 1300px)" srcset="img/catalog/chicken-small-desktop@1x.webp, img/catalog/chicken-small-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/chicken-small-tablet@1x.webp, img/catalog/chicken-small-tablet@2x.webp 2x">
@@ -54,7 +56,7 @@
                 </picture>
               </a>
               <div class="catalog__product-info">
-                <a href="products/cat-energy-pro-500-kitchen.html" class="catalog__product-name-link">
+                <a href="products/cat-energy-pro-500-kitchen.html" class="catalog__product-name-link" aria-label="Открыть страницу товара CAT ENERGY PRO 500 курица">
                   <h3 class="catalog__product-name">Cat Energy PRO <span class="catalog__product-weight">500 г</span></h3>
                 </a>
                 <table class="catalog__characteristic-list">
@@ -72,10 +74,10 @@
                   </tr>
                 </table>
               </div>
-              <a href="" class="button button--green catalog__order-button">Заказать</a>
+              <a href="" class="button button--green catalog__order-button" aria-label="Заказать CAT ENERGY PRO 500 курица">Заказать</a>
             </article>
             <article class="catalog__product">
-              <a href="products/cat-energy-pro-1000-kitchen.html" class="catalog__product-img-link">
+              <a href="products/cat-energy-pro-1000-kitchen.html" class="catalog__product-img-link" aria-label="Открыть страницу товара CAT ENERGY PRO 1000 курица" tabindex="-1">
                 <picture>
                   <source type="image/webp" media="(min-width: 1300px)" srcset="img/catalog/chicken-big-desktop@1x.webp, img/catalog/chicken-big-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/chicken-big-tablet@1x.webp, img/catalog/chicken-big-tablet@2x.webp 2x">
@@ -87,7 +89,7 @@
                 </picture>
               </a>
               <div class="catalog__product-info">
-                <a href="products/cat-energy-pro-1000-kitchen.html" class="catalog__product-name-link">
+                <a href="products/cat-energy-pro-1000-kitchen.html" class="catalog__product-name-link" aria-label="Открыть страницу товара CAT ENERGY PRO 1000 курица">
                   <h3 class="catalog__product-name">Cat Energy PRO <span class="catalog__product-weight">1000 г</span></h3>
                 </a>
                 <table class="catalog__characteristic-list">
@@ -105,10 +107,10 @@
                   </tr>
                 </table>
               </div>
-              <a href="order.html" class="button button--green catalog__order-button">Заказать</a>
+              <a href="order.html" class="button button--green catalog__order-button" aria-label="Заказать CAT ENERGY PRO 1000 курица">Заказать</a>
             </article>
             <article class="catalog__product">
-              <a href="products/cat-energy-pro-500-fish.html" class="catalog__product-img-link">
+              <a href="products/cat-energy-pro-500-fish.html" class="catalog__product-img-link" aria-label="Открыть страницу товара CAT ENERGY PRO 500 рыба" tabindex="-1">
                 <picture>
                   <source type="image/webp" media="(min-width: 1300px)" srcset="img/catalog/fish-small-desktop@1x.webp, img/catalog/fish-small-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/fish-small-tablet@1x.webp, img/catalog/fish-small-tablet@2x.webp 2x">
@@ -120,7 +122,7 @@
                 </picture>
               </a>
               <div class="catalog__product-info">
-                <a href="products/cat-energy-pro-500-fish.html" class="catalog__product-name-link">
+                <a href="products/cat-energy-pro-500-fish.html" class="catalog__product-name-link" aria-label="Открыть страницу товара CAT ENERGY PRO 500 рыба">
                   <h3 class="catalog__product-name">Cat Energy PRO <span class="catalog__product-weight">500 г</span></h3>
                 </a>
                 <table class="catalog__characteristic-list">
@@ -138,10 +140,10 @@
                   </tr>
                 </table>
               </div>
-              <a href="order.html" class="button button--green catalog__order-button">Заказать</a>
+              <a href="order.html" class="button button--green catalog__order-button" aria-label="Заказать CAT ENERGY PRO 500 рыба">Заказать</a>
             </article>
             <article class="catalog__product">
-              <a href="products/cat-energy-pro-1000-fish.html" class="catalog__product-img-link">
+              <a href="products/cat-energy-pro-1000-fish.html" class="catalog__product-img-link" aria-label="Открыть страницу товара CAT ENERGY PRO 1000 рыба" tabindex="-1">
                 <picture>
                   <source type="image/webp" media="(min-width: 1300px)" srcset="img/catalog/fish-big-desktop@1x.webp, img/catalog/fish-big-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/fish-big-tablet@1x.webp, img/catalog/fish-big-tablet@2x.webp 2x">
@@ -153,7 +155,7 @@
                 </picture>
               </a>
               <div class="catalog__product-info">
-                <a href="products/cat-energy-pro-1000-fish.html" class="catalog__product-name-link">
+                <a href="products/cat-energy-pro-1000-fish.html" class="catalog__product-name-link" aria-label="Открыть страницу товара CAT ENERGY PRO 1000 рыба">
                   <h3 class="catalog__product-name">Cat Energy PRO <span class="catalog__product-weight">1000 г</span></h3>
                 </a>
                 <table class="catalog__characteristic-list">
@@ -171,10 +173,10 @@
                   </tr>
                 </table>
               </div>
-              <a href="order.html" class="button button--green catalog__order-button">Заказать</a>
+              <a href="order.html" class="button button--green catalog__order-button" aria-label="Заказать CAT ENERGY PRO 1000 рыба">Заказать</a>
             </article>
             <article class="catalog__product">
-              <a href="products/cat-energy-slim-500-buckwheat.html" class="catalog__product-img-link">
+              <a href="products/cat-energy-slim-500-buckwheat.html" class="catalog__product-img-link" aria-label="Открыть страницу товара Cat Energy PRO 500 гречка" tabindex="-1">
                 <picture>
                   <source type="image/webp" media="(min-width: 1300px)" srcset="img/catalog/buckwheat-small-desktop@1x.webp, img/catalog/buckwheat-small-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/buckwheat-small-tablet@1x.webp, img/catalog/buckwheat-small-tablet@2x.webp 2x">
@@ -186,7 +188,7 @@
                 </picture>
               </a>
               <div class="catalog__product-info">
-                <a href="products/cat-energy-slim-500-buckwheat.html" class="catalog__product-name-link">
+                <a href="products/cat-energy-slim-500-buckwheat.html" class="catalog__product-name-link" aria-label="Открыть страницу товара Cat Energy PRO 500 гречка">
                   <h3 class="catalog__product-name">Cat Energy SLIM <span class="catalog__product-weight">500 г</span></h3>
                 </a>
                 <table class="catalog__characteristic-list">
@@ -204,10 +206,10 @@
                   </tr>
                 </table>
               </div>
-              <a href="order.html" class="button button--green catalog__order-button">Заказать</a>
+              <a href="order.html" class="button button--green catalog__order-button" aria-label="Заказать Cat Energy PRO 500 гречка">Заказать</a>
             </article>
             <article class="catalog__product">
-              <a href="products/cat-energy-slim-1000-buckwheat.html" class="catalog__product-img-link">
+              <a href="products/cat-energy-slim-1000-buckwheat.html" class="catalog__product-img-link" aria-label="Открыть страницу товара Cat Energy PRO 1000 гречка" tabindex="-1">
                 <picture>
                   <source type="image/webp" media="(min-width: 1300px)" srcset="img/catalog/buckwheat-big-desktop@1x.webp, img/catalog/buckwheat-big-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/buckwheat-big-tablet@1x.webp, img/catalog/buckwheat-big-tablet@2x.webp 2x">
@@ -219,7 +221,7 @@
                 </picture>
               </a>
               <div class="catalog__product-info">
-                <a href="products/cat-energy-slim-1000-buckwheat.html" class="catalog__product-name-link">
+                <a href="products/cat-energy-slim-1000-buckwheat.html" class="catalog__product-name-link" aria-label="Открыть страницу товара Cat Energy PRO 1000 гречка">
                   <h3 class="catalog__product-name">Cat Energy SLIM <span class="catalog__product-weight">1000 г</span></h3>
                 </a>
                 <table class="catalog__characteristic-list">
@@ -237,10 +239,10 @@
                   </tr>
                 </table>
               </div>
-              <a href="order.html" class="button button--green catalog__order-button">Заказать</a>
+              <a href="order.html" class="button button--green catalog__order-button" aria-label="Заказать Cat Energy PRO 1000 гречка">Заказать</a>
             </article>
             <article class="catalog__product">
-              <a href="products/cat-energy-slim-500-rice.html" class="catalog__product-img-link">
+              <a href="products/cat-energy-slim-500-rice.html" class="catalog__product-img-link" aria-label="Открыть страницу товара Cat Energy PRO 500 рис" tabindex="-1">
                 <picture>
                   <source type="image/webp" media="(min-width: 1300px)" srcset="img/catalog/rice-small-desktop@1x.webp, img/catalog/rice-small-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/rice-small-tablet@1x.webp, img/catalog/rice-small-tablet@2x.webp 2x">
@@ -252,7 +254,7 @@
                 </picture>
               </a>
               <div class="catalog__product-info">
-                <a href="products/cat-energy-slim-500-rice.html" class="catalog__product-name-link">
+                <a href="products/cat-energy-slim-500-rice.html" class="catalog__product-name-link" aria-label="Открыть страницу товара Cat Energy PRO 500 рис">
                   <h3 class="catalog__product-name">Cat Energy SLIM <span class="catalog__product-weight">500 г</span></h3>
                 </a>
                 <table class="catalog__characteristic-list">
@@ -270,7 +272,7 @@
                   </tr>
                 </table>
               </div>
-              <a href="order.html" class="button button--green catalog__order-button">Заказать</a>
+              <a href="order.html" class="button button--green catalog__order-button" aria-label="Заказать Cat Energy PRO 500 рис">Заказать</a>
             </article>
             <div class="catalog__show-more">
               <div class="catalog__product-info catalog__product-info--show-more">
@@ -278,7 +280,7 @@
                 <p class="catalog__show-more-description">
                   На самом деле вкусов гораздо больше!
                 </p>
-                <a href="all-products.html" class="button button--gray catalog__show-all-button">Показать все</a>
+                <a href="all-products.html" class="button button--gray catalog__show-all-button" aria-label="Показать все товары каталога">Показать все</a>
               </div>
             </div>
           </div>
@@ -290,7 +292,7 @@
           <div class="additional-products__wrapper">
             <div class="additional-products__list">
               <article class="additional-products__item">
-                <a href="" class="additional-products__name-link">
+                <a href="" class="additional-products__name-link" aria-label="Перейти на страницу товара Сахаразаменитель">
                   <h3 class="additional-products__name">Сахаразаменитель</h3>
                 </a>
                 <table class="additional-products__characteristics">
@@ -299,10 +301,10 @@
                     <td class="additional-products__price">200 Р.</td>
                   </tr>
                 </table>
-                <a href="order.html" class="button button--green additional-products__button">Заказать</a>
+                <a href="order.html" class="button button--green additional-products__button" aria-label="Заказать Сахаразаменитель">Заказать</a>
               </article>
               <article class="additional-products__item">
-                <a href="" class="additional-products__name-link">
+                <a href="" class="additional-products__name-link" aria-label="Перейти на страницу товара Питьевая вода">
                   <h3 class="additional-products__name">Питьевая вода</h3>
                 </a>
                 <table class="additional-products__characteristics">
@@ -311,10 +313,10 @@
                     <td class="additional-products__price">50 Р.</td>
                   </tr>
                 </table>
-                <a href="order.html" class="button button--green additional-products__button">Заказать</a>
+                <a href="order.html" class="button button--green additional-products__button" aria-label="Заказать Питьевую воду">Заказать</a>
               </article>
               <article class="additional-products__item">
-                <a href="" class="additional-products__name-link">
+                <a href="" class="additional-products__name-link" aria-label="Перейти на страницу товара Молоко">
                   <h3 class="additional-products__name">Молоко</h3>
                 </a>
                 <table class="additional-products__characteristics">
@@ -323,10 +325,10 @@
                     <td class="additional-products__price">100 Р.</td>
                   </tr>
                 </table>
-                <a href="order.html" class="button button--green additional-products__button">Заказать</a>
+                <a href="order.html" class="button button--green additional-products__button" aria-label="Заказать Молоко">Заказать</a>
               </article>
               <article class="additional-products__item">
-                <a href="" class="additional-products__name-link">
+                <a href="" class="additional-products__name-link" aria-label="Перейти на страницу товара Витамины">
                   <h3 class="additional-products__name">Витамины</h3>
                 </a>
                 <table class="additional-products__characteristics">
@@ -335,12 +337,12 @@
                     <td class="additional-products__price">300 Р.</td>
                   </tr>
                 </table>
-                <a href="order.html" class="button button--green additional-products__button">Заказать</a>
+                <a href="order.html" class="button button--green additional-products__button" aria-label="Заказать Витамины">Заказать</a>
               </article>
             </div>
             <section class="additional-products__promo promo">
               <h2 class="visually-hidden">Акция магазина</h2>
-              <a href="promo.html" class="promo__link">
+              <a href="promo.html" class="promo__link" aria-label="Перейти на страницу акции Закажите все и получите подарок">
                 <p class="promo__description">Закажите все<br>и получите чехол для кота в подарок!</p>
               </a>
             </section>

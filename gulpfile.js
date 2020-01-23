@@ -85,6 +85,15 @@ gulp.task("server", function () {
   gulp.watch("source/*.html").on("change", gulp.series("html", server.reload));
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "html", "images", "webp"));
+gulp.task("build",
+  gulp.series("clean",
+    gulp.parallel(
+      "copy",
+      "css",
+      "html",
+      gulp.series("images", "webp")
+    )
+  )
+);
 
 gulp.task("start", gulp.series("build", "server"));
