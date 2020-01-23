@@ -12,7 +12,7 @@
       <div class="page-header__wrapper container">
         <nav class="page-header__main-nav main-nav main-nav--nojs main-nav--opened">
           <div class="main-nav__logo-wrapper">
-            <a href="index.html" class="main-nav__logo logo" aria-label="Логотип кэт энержи.">
+            <a href="index.html" class="main-nav__logo logo" aria-label="Перейти на главную страницу сайта">
               <picture>
                 <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
                 <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -45,43 +45,43 @@
             <ul class="standard-margings choice-program-form__cat-data-fields">
               <li class="choice-program-form__field choice-program-form__field--text">
                 <label for="name" class="choice-program-form__label">Имя:*</label>
-                <input id="name" name="name" type="text" class="choice-program-form__control choice-program-form__text" placeholder="Барсик" required>
+                <input id="name" name="name" type="text" class="choice-program-form__control choice-program-form__text" aria-label="Введите имя кота" placeholder="Барсик" required>
               </li>
               <li class="choice-program-form__field choice-program-form__field--text">
                 <label for="weight" class="choice-program-form__label">Вес (кг):*</label>
-                <input id="weight" name="weight" type="text" class="choice-program-form__text" placeholder="7" required>
+                <input id="weight" name="weight" type="text" class="choice-program-form__text" placeholder="7" aria-label="Введите вес кота" required>
               </li>
               <li class="choice-program-form__field choice-program-form__field--text">
                 <label for="age" class="choice-program-form__label">Возраст (лет):</label>
-                <input id="age" name="age" type="text" class="choice-program-form__text" placeholder="7">
+                <input id="age" name="age" type="text" class="choice-program-form__text" aria-label="Введите возраст кота" placeholder="7">
               </li>
             </ul>
             <ul class="choice-program-form__choice-aim">
               <li class="choice-program-form__field choice-program-form__field--radio">
                 <input type="radio" id="aimLoseWeight" name="aim" class="visually-hidden choice-program-form__radio" value="lose weight" checked>
-                <label for="aimLoseWeight" class="choice-program-form__label">Похудение</label>
+                <label for="aimLoseWeight" class="choice-program-form__label" aria-label="Подобрать программу для похудения">Похудение</label>
               </li>
               <li class="choice-program-form__field choice-program-form__field--radio">
                 <input type="radio" id="aimGainWeight" name="aim" class="visually-hidden choice-program-form__radio" value="gain weight">
-                <label for="aimGainWeight" class="choice-program-form__label">Набор массы</label>
+                <label for="aimGainWeight" class="choice-program-form__label" aria-label="Подобрать программу для набора массы">Набор массы</label>
               </li>
               <li class="choice-program-form__field choice-program-form__field--radio">
                 <input type="radio" id="aimDontKnow" name="aim" class="visually-hidden choice-program-form__radio" value="i dont know">
-                <label for="aimDontKnow" class="choice-program-form__label">Не знаю (нужен ваш совет)</label>
+                <label for="aimDontKnow" class="choice-program-form__label" aria-label="Не знаю, нужен ваш совет">Не знаю (нужен ваш совет)</label>
               </li>
             </ul>
             <fieldset class="choice-program-form__fieldset choice-program-form__owner-data-fieldset standard-margings">
               <div class="choice-program-form__legend section-title section-title--owner">
                 <span class="section-title__text">Контактные данные (владельца кота)</span>
               </div>
-              <ul class="choice-program-form__owner-data-fields">
+              <ul class="choice-program-form__owne  r-data-fields">
                 <li class="choice-program-form__field choice-program-form__field--text choice-program-form__owner-email">
                   <label for="email" class="choice-program-form__label">E-mail:*</label>
-                  <input id="email" name="e-mail" type="email" class="choice-program-form__text choice-program-form__text--email" placeholder="kuklachev@gmail.com" required>
+                  <input id="email" name="e-mail" type="email" class="choice-program-form__text choice-program-form__text--email" placeholder="kuklachev@gmail.com" aria-label="Введите ваш адрес электронной почты" required>
                 </li>
                 <li class="choice-program-form__field choice-program-form__field--text choice-program-form__owner-phone">
                   <label for="phone" class="choice-program-form__label">Телефон:*</label>
-                  <input id="phone" name="phone" type="tel" class="choice-program-form__text choice-program-form__text--phone" placeholder="8(960) 900-60-90" required>
+                  <input id="phone" name="phone" type="tel" class="choice-program-form__text choice-program-form__text--phone" placeholder="8(960) 900-60-90" aria-label="Введите ваш номер телефона" required>
                 </li>
               </ul>
             </fieldset>
@@ -89,7 +89,7 @@
               <div class="choice-program-form__legend section-title">
                 <label for="comments" class="section-title__text">Комментарий</label>
               </div>
-              <textarea name="comments" id="comments" class="choice-program-form__comments" cols="20" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+              <textarea name="comments" id="comments" class="choice-program-form__comments" cols="20" rows="10" placeholder="Расскажите обо всех повадках кота" aria-label="Введите комментарии если нужно"></textarea>
             </div>
             <fieldset class="choice-program-form__additional-fieldset standard-margings">
               <div class="choice-program-form__legend section-title">
@@ -98,19 +98,19 @@
               <ul class="choice-program-form__field-additional">
                 <li class="choice-program-form__field choice-program-form__field--check choice-program-form__field-additional-item">
                   <input type="checkbox" class="visually-hidden choice-program-form__checkbox" id="additionalProductsSweetener" name="additional-products--sweetener" checked>
-                  <label for="additionalProductsSweetener" class="choice-program-form__label">Сахарозаменитель</label>
+                  <label for="additionalProductsSweetener" class="choice-program-form__label" aria-label="Дополнительно нужен Сахарозаменитель">Сахарозаменитель</label>
                 </li>
                 <li class="choice-program-form__field choice-program-form__field--check choice-program-form__field-additional-item">
                   <input type="checkbox" class="visually-hidden choice-program-form__checkbox" id="additionalProductsWater" name="additional-products--water">
-                  <label for="additionalProductsWater" class="choice-program-form__label">Питьевая вода</label>
+                  <label for="additionalProductsWater" class="choice-program-form__label" aria-label="Дополнительно нужена питьевая вода">Питьевая вода</label>
                 </li>
                 <li class="choice-program-form__field choice-program-form__field--check choice-program-form__field-additional-item">
                   <input type="checkbox" class="visually-hidden choice-program-form__checkbox" id="additionalProductsMilk" name="additional-products--milk">
-                  <label for="additionalProductsMilk" class="choice-program-form__label">Молоко</label>
+                  <label for="additionalProductsMilk" class="choice-program-form__label" aria-label="Дополнительно нужно молоко">Молоко</label>
                 </li>
                 <li class="choice-program-form__field choice-program-form__field--check choice-program-form__field-additional-item">
                   <input type="checkbox" class="visually-hidden choice-program-form__checkbox" id="additionalProductsVitamins" name="additional-products--vitamins">
-                  <label for="additionalProductsVitamins" class="choice-program-form__label">Витамины</label>
+                  <label for="additionalProductsVitamins" class="choice-program-form__label" aria-label="Дополнительно нужны витамины">Витамины</label>
                 </li>
               </ul>
             </fieldset>
